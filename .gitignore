@@ -1,0 +1,69 @@
+# Dependencias
+node_modules/
+package-lock.json
+dist
+dist-ssr
+*.local
+
+# Archivos de construcción
+dist/
+build/
+
+# Entorno y variables de entorno
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Logs y directorios temporales
+logs/
+*.log
+temp/
+tmp/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# IDEs y editores
+.vscode/
+.idea/
+*.code-workspace
+!.vscode/extensions.json
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Carpetas específicas de Vite
+vite.config.ts.bak
+vite-env.d.ts
+
+# Backend (Express)
+server/.env
+server/node_modules/
+server/package-lock.json
+
+# Frontend (React + Vite)
+public/assets/
+src/assets/img/*.jpg
+src/assets/img/*.png
+
+# Pruebas
+coverage/
+test-results/
+
+# Otros archivos generados automáticamente
+*.swp
+*.bak
+*.tmp
+
+

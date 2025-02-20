@@ -1,0 +1,23 @@
+Eskemma/
+|--- node_modules/
+|--- public(
+|---src
+|-----assets/
+|-------img/
+|----components/
+|-------Header.tsx
+|----App.css
+|----App.tsx
+|----index.css
+|----main.tsx
+|----vite-env.d.ts
+|---.gitIgnore
+|---eslint.config.js
+|---index.html
+|---package-lock.json
+|---package.json
+|---README.md
+|---tsconfig.app.json
+|---tsconfig.json
+|---tsconfig.node.json
+|---vite.config.ts
