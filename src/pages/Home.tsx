@@ -4,7 +4,7 @@ const Home = () => {
     <main className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
       {/* Sección Hero */}
       <section className="text-center mb-8">
-        <h1 className="text-4xl font-bold text-gray-800">Bienvenido a Mi Aplicación</h1>
+        <h1 className="font-brand-primary text-4xl font-bold text-brand-primary">Bienvenido a Mi Aplicación</h1>
         <p className="mt-4 text-lg text-gray-600">
           Descubre cómo nuestra plataforma puede ayudarte a alcanzar tus objetivos.
         </p>
