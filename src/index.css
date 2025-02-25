@@ -112,6 +112,9 @@
 
 }
 
+/* Importar estilos personalizados */
+@import "./assets/styles/utilities.css";
+
 /* Globale de Paul Irish */
 html {
   box-sizing: border-box;
@@ -133,15 +136,3 @@ body {
   background-color: var(--White-eske);
 }
 
-/* Extensión de utilidades */
-@layer utilities {
-  .text-brand-primary {
-    color: var(--Blue-eske);
-  }
-  .bg-brand-primary {
-    background-color: var(--White-eske);
-  }
-  .font-brand-primary {
-    font-family: var(--font-primary);
-  }
-}

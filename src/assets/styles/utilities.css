@@ -1,0 +1,621 @@
+/* src/utilities.css */
+
+/* Extensión de utilidades */
+@layer utilities {
+    /* ------------------------------ */
+    /* COLORES - Blue */
+    /* ------------------------------ */
+    .text-blue-eske {
+      color: var(--Blue-eske);
+    }
+    .bg-blue-eske {
+      background-color: var(--Blue-eske);
+    }
+    .text-blue-10 {
+      color: var(--Blue-10);
+    }
+    .bg-blue-10 {
+      background-color: var(--Blue-10);
+    }
+    .text-blue-20 {
+      color: var(--Blue-20);
+    }
+    .bg-blue-20 {
+      background-color: var(--Blue-20);
+    }
+    .text-blue-30 {
+      color: var(--Blue-30);
+    }
+    .bg-blue-30 {
+      background-color: var(--Blue-30);
+    }
+    .text-blue-40 {
+      color: var(--Blue-40);
+    }
+    .bg-blue-40 {
+      background-color: var(--Blue-40);
+    }
+    .text-blue-60 {
+      color: var(--Blue-60);
+    }
+    .bg-blue-60 {
+      background-color: var(--Blue-60);
+    }
+    .text-blue-70 {
+      color: var(--Blue-70);
+    }
+    .bg-blue-70 {
+      background-color: var(--Blue-70);
+    }
+    .text-blue-80 {
+      color: var(--Blue-80);
+    }
+    .bg-blue-80 {
+      background-color: var(--Blue-80);
+    }
+    .text-blue-90 {
+      color: var(--Blue-90);
+    }
+    .bg-blue-90 {
+      background-color: var(--Blue-90);
+    }
+  
+    /* ------------------------------ */
+    /* COLORES - Orange */
+    /* ------------------------------ */
+    .text-orange-eske {
+      color: var(--Orange-eske);
+    }
+    .bg-orange-eske {
+      background-color: var(--Orange-eske);
+    }
+    .text-orange-10 {
+      color: var(--Orange-10);
+    }
+    .bg-orange-10 {
+      background-color: var(--Orange-10);
+    }
+    .text-orange-20 {
+      color: var(--Orange-20);
+    }
+    .bg-orange-20 {
+      background-color: var(--Orange-20);
+    }
+    .text-orange-30 {
+      color: var(--Orange-30);
+    }
+    .bg-orange-30 {
+      background-color: var(--Orange-30);
+    }
+    .text-orange-40 {
+      color: var(--Orange-40);
+    }
+    .bg-orange-40 {
+      background-color: var(--Orange-40);
+    }
+    .text-orange-60 {
+      color: var(--Orange-60);
+    }
+    .bg-orange-60 {
+      background-color: var(--Orange-60);
+    }
+    .text-orange-70 {
+      color: var(--Orange-70);
+    }
+    .bg-orange-70 {
+      background-color: var(--Orange-70);
+    }
+    .text-orange-80 {
+      color: var(--Orange-80);
+    }
+    .bg-orange-80 {
+      background-color: var(--Orange-80);
+    }
+    .text-orange-90 {
+      color: var(--Orange-90);
+    }
+    .bg-orange-90 {
+      background-color: var(--Orange-90);
+    }
+  
+    /* ------------------------------ */
+    /* COLORES - White */
+    /* ------------------------------ */
+    .text-white-eske {
+      color: var(--White-eske);
+    }
+    .bg-white-eske {
+      background-color: var(--White-eske);
+    }
+    .text-white-10 {
+      color: var(--White-10);
+    }
+    .bg-white-10 {
+      background-color: var(--White-10);
+    }
+    .text-white-20 {
+      color: var(--White-20);
+    }
+    .bg-white-20 {
+      background-color: var(--White-20);
+    }
+    .text-white-30 {
+      color: var(--White-30);
+    }
+    .bg-white-30 {
+      background-color: var(--White-30);
+    }
+    .text-white-40 {
+      color: var(--White-40);
+    }
+    .bg-white-40 {
+      background-color: var(--White-40);
+    }
+    .text-white-60 {
+      color: var(--White-60);
+    }
+    .bg-white-60 {
+      background-color: var(--White-60);
+    }
+    .text-white-70 {
+      color: var(--White-70);
+    }
+    .bg-white-70 {
+      background-color: var(--White-70);
+    }
+    .text-white-80 {
+      color: var(--White-80);
+    }
+    .bg-white-80 {
+      background-color: var(--White-80);
+    }
+    .text-white-90 {
+      color: var(--White-90);
+    }
+    .bg-white-90 {
+      background-color: var(--White-90);
+    }
+  
+    /* ------------------------------ */
+    /* COLORES - Gray */
+    /* ------------------------------ */
+    .text-gray-eske {
+      color: var(--Gray-eske);
+    }
+    .bg-gray-eske {
+      background-color: var(--Gray-eske);
+    }
+    .text-gray-10 {
+      color: var(--Gray-10);
+    }
+    .bg-gray-10 {
+      background-color: var(--Gray-10);
+    }
+    .text-gray-20 {
+      color: var(--Gray-20);
+    }
+    .bg-gray-20 {
+      background-color: var(--Gray-20);
+    }
+    .text-gray-30 {
+      color: var(--Gray-30);
+    }
+    .bg-gray-30 {
+      background-color: var(--Gray-30);
+    }
+    .text-gray-40 {
+      color: var(--Gray-40);
+    }
+    .bg-gray-40 {
+      background-color: var(--Gray-40);
+    }
+    .text-gray-60 {
+      color: var(--Gray-60);
+    }
+    .bg-gray-60 {
+      background-color: var(--Gray-60);
+    }
+    .text-gray-70 {
+      color: var(--Gray-70);
+    }
+    .bg-gray-70 {
+      background-color: var(--Gray-70);
+    }
+    .text-gray-80 {
+      color: var(--Gray-80);
+    }
+    .bg-gray-80 {
+      background-color: var(--Gray-80);
+    }
+    .text-gray-90 {
+      color: var(--Gray-90);
+    }
+    .bg-gray-90 {
+      background-color: var(--Gray-90);
+    }
+  
+    /* ------------------------------ */
+    /* COLORES - Black */
+    /* ------------------------------ */
+    .text-black-eske {
+      color: var(--Black-eske);
+    }
+    .bg-black-eske {
+      background-color: var(--Black-eske);
+    }
+    .text-black-10 {
+      color: var(--Black-10);
+    }
+    .bg-black-10 {
+      background-color: var(--Black-10);
+    }
+    .text-black-20 {
+      color: var(--Black-20);
+    }
+    .bg-black-20 {
+      background-color: var(--Black-20);
+    }
+    .text-black-30 {
+      color: var(--Black-30);
+    }
+    .bg-black-30 {
+      background-color: var(--Black-30);
+    }
+    .text-black-40 {
+      color: var(--Black-40);
+    }
+    .bg-black-40 {
+      background-color: var(--Black-40);
+    }
+    .text-black-90 {
+      color: var(--Black-90);
+    }
+    .bg-black-90 {
+      background-color: var(--Black-90);
+    }
+  
+    /* ------------------------------ */
+    /* COLORES - Bluegreen */
+    /* ------------------------------ */
+    .text-bluegreen-eske {
+      color: var(--Bluegreen-eske);
+    }
+    .bg-bluegreen-eske {
+      background-color: var(--Bluegreen-eske);
+    }
+    .text-bluegreen-10 {
+      color: var(--Bluegreen-10);
+    }
+    .bg-bluegreen-10 {
+      background-color: var(--Bluegreen-10);
+    }
+    .text-bluegreen-20 {
+      color: var(--Bluegreen-20);
+    }
+    .bg-bluegreen-20 {
+      background-color: var(--Bluegreen-20);
+    }
+    .text-bluegreen-30 {
+      color: var(--Bluegreen-30);
+    }
+    .bg-bluegreen-30 {
+      background-color: var(--Bluegreen-30);
+    }
+    .text-bluegreen-40 {
+      color: var(--Bluegreen-40);
+    }
+    .bg-bluegreen-40 {
+      background-color: var(--Bluegreen-40);
+    }
+    .text-bluegreen-60 {
+      color: var(--Bluegreen-60);
+    }
+    .bg-bluegreen-60 {
+      background-color: var(--Bluegreen-60);
+    }
+    .text-bluegreen-70 {
+      color: var(--Bluegreen-70);
+    }
+    .bg-bluegreen-70 {
+      background-color: var(--Bluegreen-70);
+    }
+    .text-bluegreen-80 {
+      color: var(--Bluegreen-80);
+    }
+    .bg-bluegreen-80 {
+      background-color: var(--Bluegreen-80);
+    }
+    .text-bluegreen-90 {
+      color: var(--Bluegreen-90);
+    }
+    .bg-bluegreen-90 {
+      background-color: var(--Bluegreen-90);
+    }
+  
+    /* ------------------------------ */
+    /* COLORES - Yellow */
+    /* ------------------------------ */
+    .text-yellow-eske {
+      color: var(--Yellow-eske);
+    }
+    .bg-yellow-eske {
+      background-color: var(--Yellow-eske);
+    }
+    .text-yellow-10 {
+      color: var(--Yellow-10);
+    }
+    .bg-yellow-10 {
+      background-color: var(--Yellow-10);
+    }
+    .text-yellow-20 {
+      color: var(--Yellow-20);
+    }
+    .bg-yellow-20 {
+      background-color: var(--Yellow-20);
+    }
+    .text-yellow-30 {
+      color: var(--Yellow-30);
+    }
+    .bg-yellow-30 {
+      background-color: var(--Yellow-30);
+    }
+    .text-yellow-40 {
+      color: var(--Yellow-40);
+    }
+    .bg-yellow-40 {
+      background-color: var(--Yellow-40);
+    }
+    .text-yellow-60 {
+      color: var(--Yellow-60);
+    }
+    .bg-yellow-60 {
+      background-color: var(--Yellow-60);
+    }
+    .text-yellow-70 {
+      color: var(--Yellow-70);
+    }
+    .bg-yellow-70 {
+      background-color: var(--Yellow-70);
+    }
+    .text-yellow-80 {
+      color: var(--Yellow-80);
+    }
+    .bg-yellow-80 {
+      background-color: var(--Yellow-80);
+    }
+    .text-yellow-90 {
+      color: var(--Yellow-90);
+    }
+    .bg-yellow-90 {
+      background-color: var(--Yellow-90);
+    }
+  
+    /* ------------------------------ */
+    /* COLORES - Green */
+    /* ------------------------------ */
+    .text-green-eske {
+      color: var(--Green-eske);
+    }
+    .bg-green-eske {
+      background-color: var(--Green-eske);
+    }
+    .text-green-10 {
+      color: var(--Green-10);
+    }
+    .bg-green-10 {
+      background-color: var(--Green-10);
+    }
+    .text-green-20 {
+      color: var(--Green-20);
+    }
+    .bg-green-20 {
+      background-color: var(--Green-20);
+    }
+    .text-green-30 {
+      color: var(--Green-30);
+    }
+    .bg-green-30 {
+      background-color: var(--Green-30);
+    }
+    .text-green-40 {
+      color: var(--Green-40);
+    }
+    .bg-green-40 {
+      background-color: var(--Green-40);
+    }
+    .text-green-60 {
+      color: var(--Green-60);
+    }
+    .bg-green-60 {
+      background-color: var(--Green-60);
+    }
+    .text-green-70 {
+      color: var(--Green-70);
+    }
+    .bg-green-70 {
+      background-color: var(--Green-70);
+    }
+    .text-green-80 {
+      color: var(--Green-80);
+    }
+    .bg-green-80 {
+      background-color: var(--Green-80);
+    }
+    .text-green-90 {
+      color: var(--Green-90);
+    }
+    .bg-green-90 {
+      background-color: var(--Green-90);
+    }
+  
+    /* ------------------------------ */
+    /* COLORES - Red */
+    /* ------------------------------ */
+    .text-red-eske {
+      color: var(--Red-eske);
+    }
+    .bg-red-eske {
+      background-color: var(--Red-eske);
+    }
+    .text-red-10 {
+      color: var(--Red-10);
+    }
+    .bg-red-10 {
+      background-color: var(--Red-10);
+    }
+    .text-red-20 {
+      color: var(--Red-20);
+    }
+    .bg-red-20 {
+      background-color: var(--Red-20);
+    }
+    .text-red-30 {
+      color: var(--Red-30);
+    }
+    .bg-red-30 {
+      background-color: var(--Red-30);
+    }
+    .text-red-40 {
+      color: var(--Red-40);
+    }
+    .bg-red-40 {
+      background-color: var(--Red-40);
+    }
+    .text-red-60 {
+      color: var(--Red-60);
+    }
+    .bg-red-60 {
+      background-color: var(--Red-60);
+    }
+    .text-red-70 {
+      color: var(--Red-70);
+    }
+    .bg-red-70 {
+      background-color: var(--Red-70);
+    }
+    .text-red-80 {
+      color: var(--Red-80);
+    }
+    .bg-red-80 {
+      background-color: var(--Red-80);
+    }
+    .text-red-90 {
+      color: var(--Red-90);
+    }
+    .bg-red-90 {
+      background-color: var(--Red-90);
+    }
+  
+    /* ------------------------------ */
+    /* TIPOGRAFÍA */
+    /* ------------------------------ */
+    .font-primary {
+      font-family: var(--font-primary);
+    }
+    .font-capital {
+      font-family: var(--font-capital);
+    }
+  
+    /* ------------------------------ */
+    /* ESPACIADO */
+    /* ------------------------------ */
+    .p-spacing-1 {
+      padding: var(--spacing-1);
+    }
+    .p-spacing-2 {
+      padding: var(--spacing-2);
+    }
+    .p-spacing-3 {
+      padding: var(--spacing-3);
+    }
+    .p-spacing-4 {
+      padding: var(--spacing-4);
+    }
+    .p-spacing-5 {
+      padding: var(--spacing-5);
+    }
+    .m-spacing-1 {
+      margin: var(--spacing-1);
+    }
+    .m-spacing-2 {
+      margin: var(--spacing-2);
+    }
+    .m-spacing-3 {
+      margin: var(--spacing-3);
+    }
+    .m-spacing-4 {
+      margin: var(--spacing-4);
+    }
+    .m-spacing-5 {
+      margin: var(--spacing-5);
+    }
+  
+    /* ------------------------------ */
+    /* BREAKPOINTS */
+    /* ------------------------------ */
+    .sm\:text-center {
+      @media (min-width: var(--breakpoint-sm)) {
+        text-align: center;
+      }
+    }
+    .md\:text-center {
+      @media (min-width: var(--breakpoint-md)) {
+        text-align: center;
+      }
+    }
+    .lg\:text-center {
+      @media (min-width: var(--breakpoint-lg)) {
+        text-align: center;
+      }
+    }
+    .xl\:text-center {
+      @media (min-width: var(--breakpoint-xl)) {
+        text-align: center;
+      }
+    }
+  }
+
+    /* ------------------------------ */
+    /* TAMAÑOS DE TEXTO */
+    /* ------------------------------ */
+
+/* Extensión de utilidades */
+@layer utilities {
+    /* Tamaños de texto personalizados */
+    .text-6px {
+        font-size: 0.6rem; /* 6px */
+    }
+    .text-8px {
+        font-size: 0.8rem; /* 8px */
+    }
+    .text-10px {
+        font-size: 1rem; /* 10px */
+      }
+    .text-12px {
+      font-size: 1.2rem; /* 12px */
+    }
+    .text-14px {
+      font-size: 1.4rem; /* 14px */
+    }
+    .text-16px {
+      font-size: 1.6rem; /* 16px */
+    }
+    .text-18px {
+      font-size: 1.8rem; /* 18px */
+    }
+    .text-20px {
+      font-size: 2rem; /* 20px */
+    }
+    .text-24px {
+      font-size: 2.4rem; /* 24px */
+    }
+    .text-30px {
+      font-size: 3rem; /* 30px */
+    }
+    .text-36px {
+      font-size: 3.6rem; /* 36px */
+    }
+    .text-48px {
+      font-size: 4.8rem; /* 48px */
+    }
+  }
