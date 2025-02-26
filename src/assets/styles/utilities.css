@@ -5,119 +5,491 @@
     /* ------------------------------ */
     /* COLORES - Blue */
     /* ------------------------------ */
+    /* Base */
     .text-blue-eske {
       color: var(--Blue-eske);
     }
     .bg-blue-eske {
       background-color: var(--Blue-eske);
     }
+
+    /* Hover */
+    .hover\:text-blue-eske:hover {
+      color: var(--Blue-eske);
+    }
+    .hover\:bg-blue-eske:hover {
+      background-color: var(--Blue-eske);
+    }
+
+    /* Focus */
+    .focus\:text-blue-eske:focus {
+      color: var(--Blue-eske);
+    }
+    .focus\:bg-blue-eske:focus {
+      background-color: var(--Blue-eske);
+    }
+
+    /* Active */
+    .active\:text-blue-eske:active {
+      color: var(--Blue-eske);
+    }
+    .active\:bg-blue-eske:active {
+      background-color: var(--Blue-eske);
+    }
+
+    /* Escala Blue-10 */
     .text-blue-10 {
       color: var(--Blue-10);
     }
     .bg-blue-10 {
       background-color: var(--Blue-10);
     }
+    .hover\:text-blue-10:hover {
+      color: var(--Blue-10);
+    }
+    .hover\:bg-blue-10:hover {
+      background-color: var(--Blue-10);
+    }
+    .focus\:text-blue-10:focus {
+      color: var(--Blue-10);
+    }
+    .focus\:bg-blue-10:focus {
+      background-color: var(--Blue-10);
+    }
+    .active\:text-blue-10:active {
+      color: var(--Blue-10);
+    }
+    .active\:bg-blue-10:active {
+      background-color: var(--Blue-10);
+    }
+
+    /* Escala Blue-20 */
     .text-blue-20 {
       color: var(--Blue-20);
     }
     .bg-blue-20 {
       background-color: var(--Blue-20);
     }
+    .hover\:text-blue-20:hover {
+      color: var(--Blue-20);
+    }
+    .hover\:bg-blue-20:hover {
+      background-color: var(--Blue-20);
+    }
+    .focus\:text-blue-20:focus {
+      color: var(--Blue-20);
+    }
+    .focus\:bg-blue-20:focus {
+      background-color: var(--Blue-20);
+    }
+    .active\:text-blue-20:active {
+      color: var(--Blue-20);
+    }
+    .active\:bg-blue-20:active {
+      background-color: var(--Blue-20);
+    }
+
+    /* Escala Blue-30 */
     .text-blue-30 {
       color: var(--Blue-30);
     }
     .bg-blue-30 {
       background-color: var(--Blue-30);
     }
+    .hover\:text-blue-30:hover {
+      color: var(--Blue-30);
+    }
+    .hover\:bg-blue-30:hover {
+      background-color: var(--Blue-30);
+    }
+    .focus\:text-blue-30:focus {
+      color: var(--Blue-30);
+    }
+    .focus\:bg-blue-30:focus {
+      background-color: var(--Blue-30);
+    }
+    .active\:text-blue-30:active {
+      color: var(--Blue-30);
+    }
+    .active\:bg-blue-30:active {
+      background-color: var(--Blue-30);
+    }
+
+    /* Escala Blue-40 */
     .text-blue-40 {
       color: var(--Blue-40);
     }
     .bg-blue-40 {
       background-color: var(--Blue-40);
     }
+    .hover\:text-blue-40:hover {
+      color: var(--Blue-40);
+    }
+    .hover\:bg-blue-40:hover {
+      background-color: var(--Blue-40);
+    }
+    .focus\:text-blue-40:focus {
+      color: var(--Blue-40);
+    }
+    .focus\:bg-blue-40:focus {
+      background-color: var(--Blue-40);
+    }
+    .active\:text-blue-40:active {
+      color: var(--Blue-40);
+    }
+    .active\:bg-blue-40:active {
+      background-color: var(--Blue-40);
+    }
+
+    /* Escala Blue-60 */
     .text-blue-60 {
       color: var(--Blue-60);
     }
     .bg-blue-60 {
       background-color: var(--Blue-60);
     }
+    .hover\:text-blue-60:hover {
+      color: var(--Blue-60);
+    }
+    .hover\:bg-blue-60:hover {
+      background-color: var(--Blue-60);
+    }
+    .focus\:text-blue-60:focus {
+      color: var(--Blue-60);
+    }
+    .focus\:bg-blue-60:focus {
+      background-color: var(--Blue-60);
+    }
+    .active\:text-blue-60:active {
+      color: var(--Blue-60);
+    }
+    .active\:bg-blue-60:active {
+      background-color: var(--Blue-60);
+    }
+
+    /* Escala Blue-70 */
     .text-blue-70 {
       color: var(--Blue-70);
     }
     .bg-blue-70 {
       background-color: var(--Blue-70);
     }
+    .hover\:text-blue-70:hover {
+      color: var(--Blue-70);
+    }
+    .hover\:bg-blue-70:hover {
+      background-color: var(--Blue-70);
+    }
+    .focus\:text-blue-70:focus {
+      color: var(--Blue-70);
+    }
+    .focus\:bg-blue-70:focus {
+      background-color: var(--Blue-70);
+    }
+    .active\:text-blue-70:active {
+      color: var(--Blue-70);
+    }
+    .active\:bg-blue-70:active {
+      background-color: var(--Blue-70);
+    }
+
+    /* Escala Blue-80 */
     .text-blue-80 {
       color: var(--Blue-80);
     }
     .bg-blue-80 {
       background-color: var(--Blue-80);
     }
+    .hover\:text-blue-80:hover {
+      color: var(--Blue-80);
+    }
+    .hover\:bg-blue-80:hover {
+      background-color: var(--Blue-80);
+    }
+    .focus\:text-blue-80:focus {
+      color: var(--Blue-80);
+    }
+    .focus\:bg-blue-80:focus {
+      background-color: var(--Blue-80);
+    }
+    .active\:text-blue-80:active {
+      color: var(--Blue-80);
+    }
+    .active\:bg-blue-80:active {
+      background-color: var(--Blue-80);
+    }
+
+    /* Escala Blue-90 */
     .text-blue-90 {
       color: var(--Blue-90);
     }
     .bg-blue-90 {
       background-color: var(--Blue-90);
     }
+    .hover\:text-blue-90:hover {
+      color: var(--Blue-90);
+    }
+    .hover\:bg-blue-90:hover {
+      background-color: var(--Blue-90);
+    }
+    .focus\:text-blue-90:focus {
+      color: var(--Blue-90);
+    }
+    .focus\:bg-blue-90:focus {
+      background-color: var(--Blue-90);
+    }
+    .active\:text-blue-90:active {
+      color: var(--Blue-90);
+    }
+    .active\:bg-blue-90:active {
+      background-color: var(--Blue-90);
+    } 
+    
   
     /* ------------------------------ */
     /* COLORES - Orange */
     /* ------------------------------ */
+
+    /* Base */
     .text-orange-eske {
       color: var(--Orange-eske);
     }
     .bg-orange-eske {
       background-color: var(--Orange-eske);
     }
+
+    /* Hover */
+    .hover\:text-orange-eske:hover {
+      color: var(--Orange-eske);
+    }
+    .hover\:bg-orange-eske:hover {
+      background-color: var(--Orange-eske);
+    }
+
+    /* Focus */
+    .focus\:text-orange-eske:focus {
+      color: var(--Orange-eske);
+    }
+    .focus\:bg-orange-eske:focus {
+      background-color: var(--Orange-eske);
+    }
+
+    /* Active */
+    .active\:text-orange-eske:active {
+      color: var(--Orange-eske);
+    }
+    .active\:bg-orange-eske:active {
+      background-color: var(--Orange-eske);
+    }
+
+    /* Escala Orange-10 */
     .text-orange-10 {
       color: var(--Orange-10);
     }
     .bg-orange-10 {
       background-color: var(--Orange-10);
     }
+    .hover\:text-orange-10:hover {
+      color: var(--Orange-10);
+    }
+    .hover\:bg-orange-10:hover {
+      background-color: var(--Orange-10);
+    }
+    .focus\:text-orange-10:focus {
+      color: var(--Orange-10);
+    }
+    .focus\:bg-orange-10:focus {
+      background-color: var(--Orange-10);
+    }
+    .active\:text-orange-10:active {
+      color: var(--Orange-10);
+    }
+    .active\:bg-orange-10:active {
+      background-color: var(--Orange-10);
+    }
+
+    /* Escala Orange-20 */
     .text-orange-20 {
       color: var(--Orange-20);
     }
     .bg-orange-20 {
       background-color: var(--Orange-20);
     }
+    .hover\:text-orange-20:hover {
+      color: var(--Orange-20);
+    }
+    .hover\:bg-orange-20:hover {
+      background-color: var(--Orange-20);
+    }
+    .focus\:text-orange-20:focus {
+      color: var(--Orange-20);
+    }
+    .focus\:bg-orange-20:focus {
+      background-color: var(--Orange-20);
+    }
+    .active\:text-orange-20:active {
+      color: var(--Orange-20);
+    }
+    .active\:bg-orange-20:active {
+      background-color: var(--Orange-20);
+    }
+
+    /* Escala Orange-30 */
     .text-orange-30 {
       color: var(--Orange-30);
     }
     .bg-orange-30 {
       background-color: var(--Orange-30);
     }
+    .hover\:text-orange-30:hover {
+      color: var(--Orange-30);
+    }
+    .hover\:bg-orange-30:hover {
+      background-color: var(--Orange-30);
+    }
+    .focus\:text-orange-30:focus {
+      color: var(--Orange-30);
+    }
+    .focus\:bg-orange-30:focus {
+      background-color: var(--Orange-30);
+    }
+    .active\:text-orange-30:active {
+      color: var(--Orange-30);
+    }
+    .active\:bg-orange-30:active {
+      background-color: var(--Orange-30);
+    }
+
+    /* Escala Orange-40 */
     .text-orange-40 {
       color: var(--Orange-40);
     }
     .bg-orange-40 {
       background-color: var(--Orange-40);
     }
+    .hover\:text-orange-40:hover {
+      color: var(--Orange-40);
+    }
+    .hover\:bg-orange-40:hover {
+      background-color: var(--Orange-40);
+    }
+    .focus\:text-orange-40:focus {
+      color: var(--Orange-40);
+    }
+    .focus\:bg-orange-40:focus {
+      background-color: var(--Orange-40);
+    }
+    .active\:text-orange-40:active {
+      color: var(--Orange-40);
+    }
+    .active\:bg-orange-40:active {
+      background-color: var(--Orange-40);
+    }
+
+    /* Escala Orange-60 */
     .text-orange-60 {
       color: var(--Orange-60);
     }
     .bg-orange-60 {
       background-color: var(--Orange-60);
     }
+    .hover\:text-orange-60:hover {
+      color: var(--Orange-60);
+    }
+    .hover\:bg-orange-60:hover {
+      background-color: var(--Orange-60);
+    }
+    .focus\:text-orange-60:focus {
+      color: var(--Orange-60);
+    }
+    .focus\:bg-orange-60:focus {
+      background-color: var(--Orange-60);
+    }
+    .active\:text-orange-60:active {
+      color: var(--Orange-60);
+    }
+    .active\:bg-orange-60:active {
+      background-color: var(--Orange-60);
+    }
+
+    /* Escala Orange-70 */
     .text-orange-70 {
       color: var(--Orange-70);
     }
     .bg-orange-70 {
       background-color: var(--Orange-70);
     }
+    .hover\:text-orange-70:hover {
+      color: var(--Orange-70);
+    }
+    .hover\:bg-orange-70:hover {
+      background-color: var(--Orange-70);
+    }
+    .focus\:text-orange-70:focus {
+      color: var(--Orange-70);
+    }
+    .focus\:bg-orange-70:focus {
+      background-color: var(--Orange-70);
+    }
+    .active\:text-orange-70:active {
+      color: var(--Orange-70);
+    }
+    .active\:bg-orange-70:active {
+      background-color: var(--Orange-70);
+    }
+
+    /* Escala Orange-80 */
     .text-orange-80 {
       color: var(--Orange-80);
     }
     .bg-orange-80 {
       background-color: var(--Orange-80);
     }
+    .hover\:text-orange-80:hover {
+      color: var(--Orange-80);
+    }
+    .hover\:bg-orange-80:hover {
+      background-color: var(--Orange-80);
+    }
+    .focus\:text-orange-80:focus {
+      color: var(--Orange-80);
+    }
+    .focus\:bg-orange-80:focus {
+      background-color: var(--Orange-80);
+    }
+    .active\:text-orange-80:active {
+      color: var(--Orange-80);
+    }
+    .active\:bg-orange-80:active {
+      background-color: var(--Orange-80);
+    }
+
+    /* Escala Orange-90 */
     .text-orange-90 {
       color: var(--Orange-90);
     }
     .bg-orange-90 {
       background-color: var(--Orange-90);
     }
-  
+    .hover\:text-orange-90:hover {
+      color: var(--Orange-90);
+    }
+    .hover\:bg-orange-90:hover {
+      background-color: var(--Orange-90);
+    }
+    .focus\:text-orange-90:focus {
+      color: var(--Orange-90);
+    }
+    .focus\:bg-orange-90:focus {
+      background-color: var(--Orange-90);
+    }
+    .active\:text-orange-90:active {
+      color: var(--Orange-90);
+    }
+    .active\:bg-orange-90:active {
+      background-color: var(--Orange-90);
+    }
+
     /* ------------------------------ */
     /* COLORES - White */
     /* ------------------------------ */
@@ -274,235 +646,979 @@
       background-color: var(--Black-90);
     }
   
-    /* ------------------------------ */
+  /* ------------------------------ */
     /* COLORES - Bluegreen */
     /* ------------------------------ */
+
+    /* Base */
     .text-bluegreen-eske {
       color: var(--Bluegreen-eske);
     }
     .bg-bluegreen-eske {
       background-color: var(--Bluegreen-eske);
     }
+
+    /* Hover */
+    .hover\:text-bluegreen-eske:hover {
+      color: var(--Bluegreen-eske);
+    }
+    .hover\:bg-bluegreen-eske:hover {
+      background-color: var(--Bluegreen-eske);
+    }
+
+    /* Focus */
+    .focus\:text-bluegreen-eske:focus {
+      color: var(--Bluegreen-eske);
+    }
+    .focus\:bg-bluegreen-eske:focus {
+      background-color: var(--Bluegreen-eske);
+    }
+
+    /* Active */
+    .active\:text-bluegreen-eske:active {
+      color: var(--Bluegreen-eske);
+    }
+    .active\:bg-bluegreen-eske:active {
+      background-color: var(--Bluegreen-eske);
+    }
+
+    /* Escala Bluegreen-10 */
     .text-bluegreen-10 {
       color: var(--Bluegreen-10);
     }
     .bg-bluegreen-10 {
       background-color: var(--Bluegreen-10);
     }
+    .hover\:text-bluegreen-10:hover {
+      color: var(--Bluegreen-10);
+    }
+    .hover\:bg-bluegreen-10:hover {
+      background-color: var(--Bluegreen-10);
+    }
+    .focus\:text-bluegreen-10:focus {
+      color: var(--Bluegreen-10);
+    }
+    .focus\:bg-bluegreen-10:focus {
+      background-color: var(--Bluegreen-10);
+    }
+    .active\:text-bluegreen-10:active {
+      color: var(--Bluegreen-10);
+    }
+    .active\:bg-bluegreen-10:active {
+      background-color: var(--Bluegreen-10);
+    }
+
+    /* Escala Bluegreen-20 */
     .text-bluegreen-20 {
       color: var(--Bluegreen-20);
     }
     .bg-bluegreen-20 {
       background-color: var(--Bluegreen-20);
     }
+    .hover\:text-bluegreen-20:hover {
+      color: var(--Bluegreen-20);
+    }
+    .hover\:bg-bluegreen-20:hover {
+      background-color: var(--Bluegreen-20);
+    }
+    .focus\:text-bluegreen-20:focus {
+      color: var(--Bluegreen-20);
+    }
+    .focus\:bg-bluegreen-20:focus {
+      background-color: var(--Bluegreen-20);
+    }
+    .active\:text-bluegreen-20:active {
+      color: var(--Bluegreen-20);
+    }
+    .active\:bg-bluegreen-20:active {
+      background-color: var(--Bluegreen-20);
+    }
+
+    /* Escala Bluegreen-30 */
     .text-bluegreen-30 {
       color: var(--Bluegreen-30);
     }
     .bg-bluegreen-30 {
       background-color: var(--Bluegreen-30);
     }
+    .hover\:text-bluegreen-30:hover {
+      color: var(--Bluegreen-30);
+    }
+    .hover\:bg-bluegreen-30:hover {
+      background-color: var(--Bluegreen-30);
+    }
+    .focus\:text-bluegreen-30:focus {
+      color: var(--Bluegreen-30);
+    }
+    .focus\:bg-bluegreen-30:focus {
+      background-color: var(--Bluegreen-30);
+    }
+    .active\:text-bluegreen-30:active {
+      color: var(--Bluegreen-30);
+    }
+    .active\:bg-bluegreen-30:active {
+      background-color: var(--Bluegreen-30);
+    }
+
+    /* Escala Bluegreen-40 */
     .text-bluegreen-40 {
       color: var(--Bluegreen-40);
     }
     .bg-bluegreen-40 {
       background-color: var(--Bluegreen-40);
     }
+    .hover\:text-bluegreen-40:hover {
+      color: var(--Bluegreen-40);
+    }
+    .hover\:bg-bluegreen-40:hover {
+      background-color: var(--Bluegreen-40);
+    }
+    .focus\:text-bluegreen-40:focus {
+      color: var(--Bluegreen-40);
+    }
+    .focus\:bg-bluegreen-40:focus {
+      background-color: var(--Bluegreen-40);
+    }
+    .active\:text-bluegreen-40:active {
+      color: var(--Bluegreen-40);
+    }
+    .active\:bg-bluegreen-40:active {
+      background-color: var(--Bluegreen-40);
+    }
+
+    /* Escala Bluegreen-60 */
     .text-bluegreen-60 {
       color: var(--Bluegreen-60);
     }
     .bg-bluegreen-60 {
       background-color: var(--Bluegreen-60);
     }
+    .hover\:text-bluegreen-60:hover {
+      color: var(--Bluegreen-60);
+    }
+    .hover\:bg-bluegreen-60:hover {
+      background-color: var(--Bluegreen-60);
+    }
+    .focus\:text-bluegreen-60:focus {
+      color: var(--Bluegreen-60);
+    }
+    .focus\:bg-bluegreen-60:focus {
+      background-color: var(--Bluegreen-60);
+    }
+    .active\:text-bluegreen-60:active {
+      color: var(--Bluegreen-60);
+    }
+    .active\:bg-bluegreen-60:active {
+      background-color: var(--Bluegreen-60);
+    }
+
+    /* Escala Bluegreen-70 */
     .text-bluegreen-70 {
       color: var(--Bluegreen-70);
     }
     .bg-bluegreen-70 {
       background-color: var(--Bluegreen-70);
     }
+    .hover\:text-bluegreen-70:hover {
+      color: var(--Bluegreen-70);
+    }
+    .hover\:bg-bluegreen-70:hover {
+      background-color: var(--Bluegreen-70);
+    }
+    .focus\:text-bluegreen-70:focus {
+      color: var(--Bluegreen-70);
+    }
+    .focus\:bg-bluegreen-70:focus {
+      background-color: var(--Bluegreen-70);
+    }
+    .active\:text-bluegreen-70:active {
+      color: var(--Bluegreen-70);
+    }
+    .active\:bg-bluegreen-70:active {
+      background-color: var(--Bluegreen-70);
+    }
+
+    /* Escala Bluegreen-80 */
     .text-bluegreen-80 {
       color: var(--Bluegreen-80);
     }
     .bg-bluegreen-80 {
       background-color: var(--Bluegreen-80);
     }
+    .hover\:text-bluegreen-80:hover {
+      color: var(--Bluegreen-80);
+    }
+    .hover\:bg-bluegreen-80:hover {
+      background-color: var(--Bluegreen-80);
+    }
+    .focus\:text-bluegreen-80:focus {
+      color: var(--Bluegreen-80);
+    }
+    .focus\:bg-bluegreen-80:focus {
+      background-color: var(--Bluegreen-80);
+    }
+    .active\:text-bluegreen-80:active {
+      color: var(--Bluegreen-80);
+    }
+    .active\:bg-bluegreen-80:active {
+      background-color: var(--Bluegreen-80);
+    }
+
+    /* Escala Bluegreen-90 */
     .text-bluegreen-90 {
       color: var(--Bluegreen-90);
     }
     .bg-bluegreen-90 {
       background-color: var(--Bluegreen-90);
     }
+    .hover\:text-bluegreen-90:hover {
+      color: var(--Bluegreen-90);
+    }
+    .hover\:bg-bluegreen-90:hover {
+      background-color: var(--Bluegreen-90);
+    }
+    .focus\:text-bluegreen-90:focus {
+      color: var(--Bluegreen-90);
+    }
+    .focus\:bg-bluegreen-90:focus {
+      background-color: var(--Bluegreen-90);
+    }
+    .active\:text-bluegreen-90:active {
+      color: var(--Bluegreen-90);
+    }
+    .active\:bg-bluegreen-90:active {
+      background-color: var(--Bluegreen-90);
+    }
   
     /* ------------------------------ */
     /* COLORES - Yellow */
     /* ------------------------------ */
+
+    /* Base */
     .text-yellow-eske {
       color: var(--Yellow-eske);
     }
     .bg-yellow-eske {
       background-color: var(--Yellow-eske);
     }
+
+    /* Hover */
+    .hover\:text-yellow-eske:hover {
+      color: var(--Yellow-eske);
+    }
+    .hover\:bg-yellow-eske:hover {
+      background-color: var(--Yellow-eske);
+    }
+
+    /* Focus */
+    .focus\:text-yellow-eske:focus {
+      color: var(--Yellow-eske);
+    }
+    .focus\:bg-yellow-eske:focus {
+      background-color: var(--Yellow-eske);
+    }
+
+    /* Active */
+    .active\:text-yellow-eske:active {
+      color: var(--Yellow-eske);
+    }
+    .active\:bg-yellow-eske:active {
+      background-color: var(--Yellow-eske);
+    }
+
+    /* Escala Yellow-10 */
     .text-yellow-10 {
       color: var(--Yellow-10);
     }
     .bg-yellow-10 {
       background-color: var(--Yellow-10);
     }
+    .hover\:text-yellow-10:hover {
+      color: var(--Yellow-10);
+    }
+    .hover\:bg-yellow-10:hover {
+      background-color: var(--Yellow-10);
+    }
+    .focus\:text-yellow-10:focus {
+      color: var(--Yellow-10);
+    }
+    .focus\:bg-yellow-10:focus {
+      background-color: var(--Yellow-10);
+    }
+    .active\:text-yellow-10:active {
+      color: var(--Yellow-10);
+    }
+    .active\:bg-yellow-10:active {
+      background-color: var(--Yellow-10);
+    }
+
+    /* Escala Yellow-20 */
     .text-yellow-20 {
       color: var(--Yellow-20);
     }
     .bg-yellow-20 {
       background-color: var(--Yellow-20);
     }
+    .hover\:text-yellow-20:hover {
+      color: var(--Yellow-20);
+    }
+    .hover\:bg-yellow-20:hover {
+      background-color: var(--Yellow-20);
+    }
+    .focus\:text-yellow-20:focus {
+      color: var(--Yellow-20);
+    }
+    .focus\:bg-yellow-20:focus {
+      background-color: var(--Yellow-20);
+    }
+    .active\:text-yellow-20:active {
+      color: var(--Yellow-20);
+    }
+    .active\:bg-yellow-20:active {
+      background-color: var(--Yellow-20);
+    }
+
+    /* Escala Yellow-30 */
     .text-yellow-30 {
       color: var(--Yellow-30);
     }
     .bg-yellow-30 {
       background-color: var(--Yellow-30);
     }
+    .hover\:text-yellow-30:hover {
+      color: var(--Yellow-30);
+    }
+    .hover\:bg-yellow-30:hover {
+      background-color: var(--Yellow-30);
+    }
+    .focus\:text-yellow-30:focus {
+      color: var(--Yellow-30);
+    }
+    .focus\:bg-yellow-30:focus {
+      background-color: var(--Yellow-30);
+    }
+    .active\:text-yellow-30:active {
+      color: var(--Yellow-30);
+    }
+    .active\:bg-yellow-30:active {
+      background-color: var(--Yellow-30);
+    }
+
+    /* Escala Yellow-40 */
     .text-yellow-40 {
       color: var(--Yellow-40);
     }
     .bg-yellow-40 {
       background-color: var(--Yellow-40);
     }
+    .hover\:text-yellow-40:hover {
+      color: var(--Yellow-40);
+    }
+    .hover\:bg-yellow-40:hover {
+      background-color: var(--Yellow-40);
+    }
+    .focus\:text-yellow-40:focus {
+      color: var(--Yellow-40);
+    }
+    .focus\:bg-yellow-40:focus {
+      background-color: var(--Yellow-40);
+    }
+    .active\:text-yellow-40:active {
+      color: var(--Yellow-40);
+    }
+    .active\:bg-yellow-40:active {
+      background-color: var(--Yellow-40);
+    }
+
+    /* Escala Yellow-60 */
     .text-yellow-60 {
       color: var(--Yellow-60);
     }
     .bg-yellow-60 {
       background-color: var(--Yellow-60);
     }
+    .hover\:text-yellow-60:hover {
+      color: var(--Yellow-60);
+    }
+    .hover\:bg-yellow-60:hover {
+      background-color: var(--Yellow-60);
+    }
+    .focus\:text-yellow-60:focus {
+      color: var(--Yellow-60);
+    }
+    .focus\:bg-yellow-60:focus {
+      background-color: var(--Yellow-60);
+    }
+    .active\:text-yellow-60:active {
+      color: var(--Yellow-60);
+    }
+    .active\:bg-yellow-60:active {
+      background-color: var(--Yellow-60);
+    }
+
+    /* Escala Yellow-70 */
     .text-yellow-70 {
       color: var(--Yellow-70);
     }
     .bg-yellow-70 {
       background-color: var(--Yellow-70);
     }
+    .hover\:text-yellow-70:hover {
+      color: var(--Yellow-70);
+    }
+    .hover\:bg-yellow-70:hover {
+      background-color: var(--Yellow-70);
+    }
+    .focus\:text-yellow-70:focus {
+      color: var(--Yellow-70);
+    }
+    .focus\:bg-yellow-70:focus {
+      background-color: var(--Yellow-70);
+    }
+    .active\:text-yellow-70:active {
+      color: var(--Yellow-70);
+    }
+    .active\:bg-yellow-70:active {
+      background-color: var(--Yellow-70);
+    }
+
+    /* Escala Yellow-80 */
     .text-yellow-80 {
       color: var(--Yellow-80);
     }
     .bg-yellow-80 {
       background-color: var(--Yellow-80);
     }
+    .hover\:text-yellow-80:hover {
+      color: var(--Yellow-80);
+    }
+    .hover\:bg-yellow-80:hover {
+      background-color: var(--Yellow-80);
+    }
+    .focus\:text-yellow-80:focus {
+      color: var(--Yellow-80);
+    }
+    .focus\:bg-yellow-80:focus {
+      background-color: var(--Yellow-80);
+    }
+    .active\:text-yellow-80:active {
+      color: var(--Yellow-80);
+    }
+    .active\:bg-yellow-80:active {
+      background-color: var(--Yellow-80);
+    }
+
+    /* Escala Yellow-90 */
     .text-yellow-90 {
       color: var(--Yellow-90);
     }
     .bg-yellow-90 {
       background-color: var(--Yellow-90);
     }
+    .hover\:text-yellow-90:hover {
+      color: var(--Yellow-90);
+    }
+    .hover\:bg-yellow-90:hover {
+      background-color: var(--Yellow-90);
+    }
+    .focus\:text-yellow-90:focus {
+      color: var(--Yellow-90);
+    }
+    .focus\:bg-yellow-90:focus {
+      background-color: var(--Yellow-90);
+    }
+    .active\:text-yellow-90:active {
+      color: var(--Yellow-90);
+    }
+    .active\:bg-yellow-90:active {
+      background-color: var(--Yellow-90);
+    }
   
     /* ------------------------------ */
     /* COLORES - Green */
     /* ------------------------------ */
+
+    /* Base */
     .text-green-eske {
       color: var(--Green-eske);
     }
     .bg-green-eske {
       background-color: var(--Green-eske);
     }
+
+    /* Hover */
+    .hover\:text-green-eske:hover {
+      color: var(--Green-eske);
+    }
+    .hover\:bg-green-eske:hover {
+      background-color: var(--Green-eske);
+    }
+
+    /* Focus */
+    .focus\:text-green-eske:focus {
+      color: var(--Green-eske);
+    }
+    .focus\:bg-green-eske:focus {
+      background-color: var(--Green-eske);
+    }
+
+    /* Active */
+    .active\:text-green-eske:active {
+      color: var(--Green-eske);
+    }
+    .active\:bg-green-eske:active {
+      background-color: var(--Green-eske);
+    }
+
+    /* Escala Green-10 */
     .text-green-10 {
       color: var(--Green-10);
     }
     .bg-green-10 {
       background-color: var(--Green-10);
     }
+    .hover\:text-green-10:hover {
+      color: var(--Green-10);
+    }
+    .hover\:bg-green-10:hover {
+      background-color: var(--Green-10);
+    }
+    .focus\:text-green-10:focus {
+      color: var(--Green-10);
+    }
+    .focus\:bg-green-10:focus {
+      background-color: var(--Green-10);
+    }
+    .active\:text-green-10:active {
+      color: var(--Green-10);
+    }
+    .active\:bg-green-10:active {
+      background-color: var(--Green-10);
+    }
+
+    /* Escala Green-20 */
     .text-green-20 {
       color: var(--Green-20);
     }
     .bg-green-20 {
       background-color: var(--Green-20);
     }
+    .hover\:text-green-20:hover {
+      color: var(--Green-20);
+    }
+    .hover\:bg-green-20:hover {
+      background-color: var(--Green-20);
+    }
+    .focus\:text-green-20:focus {
+      color: var(--Green-20);
+    }
+    .focus\:bg-green-20:focus {
+      background-color: var(--Green-20);
+    }
+    .active\:text-green-20:active {
+      color: var(--Green-20);
+    }
+    .active\:bg-green-20:active {
+      background-color: var(--Green-20);
+    }
+
+    /* Escala Green-30 */
     .text-green-30 {
       color: var(--Green-30);
     }
     .bg-green-30 {
       background-color: var(--Green-30);
     }
+    .hover\:text-green-30:hover {
+      color: var(--Green-30);
+    }
+    .hover\:bg-green-30:hover {
+      background-color: var(--Green-30);
+    }
+    .focus\:text-green-30:focus {
+      color: var(--Green-30);
+    }
+    .focus\:bg-green-30:focus {
+      background-color: var(--Green-30);
+    }
+    .active\:text-green-30:active {
+      color: var(--Green-30);
+    }
+    .active\:bg-green-30:active {
+      background-color: var(--Green-30);
+    }
+
+    /* Escala Green-40 */
     .text-green-40 {
       color: var(--Green-40);
     }
     .bg-green-40 {
       background-color: var(--Green-40);
     }
+    .hover\:text-green-40:hover {
+      color: var(--Green-40);
+    }
+    .hover\:bg-green-40:hover {
+      background-color: var(--Green-40);
+    }
+    .focus\:text-green-40:focus {
+      color: var(--Green-40);
+    }
+    .focus\:bg-green-40:focus {
+      background-color: var(--Green-40);
+    }
+    .active\:text-green-40:active {
+      color: var(--Green-40);
+    }
+    .active\:bg-green-40:active {
+      background-color: var(--Green-40);
+    }
+
+    /* Escala Green-60 */
     .text-green-60 {
       color: var(--Green-60);
     }
     .bg-green-60 {
       background-color: var(--Green-60);
     }
+    .hover\:text-green-60:hover {
+      color: var(--Green-60);
+    }
+    .hover\:bg-green-60:hover {
+      background-color: var(--Green-60);
+    }
+    .focus\:text-green-60:focus {
+      color: var(--Green-60);
+    }
+    .focus\:bg-green-60:focus {
+      background-color: var(--Green-60);
+    }
+    .active\:text-green-60:active {
+      color: var(--Green-60);
+    }
+    .active\:bg-green-60:active {
+      background-color: var(--Green-60);
+    }
+
+    /* Escala Green-70 */
     .text-green-70 {
       color: var(--Green-70);
     }
     .bg-green-70 {
       background-color: var(--Green-70);
     }
+    .hover\:text-green-70:hover {
+      color: var(--Green-70);
+    }
+    .hover\:bg-green-70:hover {
+      background-color: var(--Green-70);
+    }
+    .focus\:text-green-70:focus {
+      color: var(--Green-70);
+    }
+    .focus\:bg-green-70:focus {
+      background-color: var(--Green-70);
+    }
+    .active\:text-green-70:active {
+      color: var(--Green-70);
+    }
+    .active\:bg-green-70:active {
+      background-color: var(--Green-70);
+    }
+
+    /* Escala Green-80 */
     .text-green-80 {
       color: var(--Green-80);
     }
     .bg-green-80 {
       background-color: var(--Green-80);
     }
+    .hover\:text-green-80:hover {
+      color: var(--Green-80);
+    }
+    .hover\:bg-green-80:hover {
+      background-color: var(--Green-80);
+    }
+    .focus\:text-green-80:focus {
+      color: var(--Green-80);
+    }
+    .focus\:bg-green-80:focus {
+      background-color: var(--Green-80);
+    }
+    .active\:text-green-80:active {
+      color: var(--Green-80);
+    }
+    .active\:bg-green-80:active {
+      background-color: var(--Green-80);
+    }
+
+    /* Escala Green-90 */
     .text-green-90 {
       color: var(--Green-90);
     }
     .bg-green-90 {
       background-color: var(--Green-90);
     }
+    .hover\:text-green-90:hover {
+      color: var(--Green-90);
+    }
+    .hover\:bg-green-90:hover {
+      background-color: var(--Green-90);
+    }
+    .focus\:text-green-90:focus {
+      color: var(--Green-90);
+    }
+    .focus\:bg-green-90:focus {
+      background-color: var(--Green-90);
+    }
+    .active\:text-green-90:active {
+      color: var(--Green-90);
+    }
+    .active\:bg-green-90:active {
+      background-color: var(--Green-90);
+    }
   
     /* ------------------------------ */
     /* COLORES - Red */
     /* ------------------------------ */
+
+    /* Base */
     .text-red-eske {
       color: var(--Red-eske);
     }
     .bg-red-eske {
       background-color: var(--Red-eske);
     }
+
+    /* Hover */
+    .hover\:text-red-eske:hover {
+      color: var(--Red-eske);
+    }
+    .hover\:bg-red-eske:hover {
+      background-color: var(--Red-eske);
+    }
+
+    /* Focus */
+    .focus\:text-red-eske:focus {
+      color: var(--Red-eske);
+    }
+    .focus\:bg-red-eske:focus {
+      background-color: var(--Red-eske);
+    }
+
+    /* Active */
+    .active\:text-red-eske:active {
+      color: var(--Red-eske);
+    }
+    .active\:bg-red-eske:active {
+      background-color: var(--Red-eske);
+    }
+
+    /* Escala Red-10 */
     .text-red-10 {
       color: var(--Red-10);
     }
     .bg-red-10 {
       background-color: var(--Red-10);
     }
+    .hover\:text-red-10:hover {
+      color: var(--Red-10);
+    }
+    .hover\:bg-red-10:hover {
+      background-color: var(--Red-10);
+    }
+    .focus\:text-red-10:focus {
+      color: var(--Red-10);
+    }
+    .focus\:bg-red-10:focus {
+      background-color: var(--Red-10);
+    }
+    .active\:text-red-10:active {
+      color: var(--Red-10);
+    }
+    .active\:bg-red-10:active {
+      background-color: var(--Red-10);
+    }
+
+    /* Escala Red-20 */
     .text-red-20 {
       color: var(--Red-20);
     }
     .bg-red-20 {
       background-color: var(--Red-20);
     }
+    .hover\:text-red-20:hover {
+      color: var(--Red-20);
+    }
+    .hover\:bg-red-20:hover {
+      background-color: var(--Red-20);
+    }
+    .focus\:text-red-20:focus {
+      color: var(--Red-20);
+    }
+    .focus\:bg-red-20:focus {
+      background-color: var(--Red-20);
+    }
+    .active\:text-red-20:active {
+      color: var(--Red-20);
+    }
+    .active\:bg-red-20:active {
+      background-color: var(--Red-20);
+    }
+
+    /* Escala Red-30 */
     .text-red-30 {
       color: var(--Red-30);
     }
     .bg-red-30 {
       background-color: var(--Red-30);
     }
+    .hover\:text-red-30:hover {
+      color: var(--Red-30);
+    }
+    .hover\:bg-red-30:hover {
+      background-color: var(--Red-30);
+    }
+    .focus\:text-red-30:focus {
+      color: var(--Red-30);
+    }
+    .focus\:bg-red-30:focus {
+      background-color: var(--Red-30);
+    }
+    .active\:text-red-30:active {
+      color: var(--Red-30);
+    }
+    .active\:bg-red-30:active {
+      background-color: var(--Red-30);
+    }
+
+    /* Escala Red-40 */
     .text-red-40 {
       color: var(--Red-40);
     }
     .bg-red-40 {
       background-color: var(--Red-40);
     }
+    .hover\:text-red-40:hover {
+      color: var(--Red-40);
+    }
+    .hover\:bg-red-40:hover {
+      background-color: var(--Red-40);
+    }
+    .focus\:text-red-40:focus {
+      color: var(--Red-40);
+    }
+    .focus\:bg-red-40:focus {
+      background-color: var(--Red-40);
+    }
+    .active\:text-red-40:active {
+      color: var(--Red-40);
+    }
+    .active\:bg-red-40:active {
+      background-color: var(--Red-40);
+    }
+
+    /* Escala Red-60 */
     .text-red-60 {
       color: var(--Red-60);
     }
     .bg-red-60 {
       background-color: var(--Red-60);
     }
+    .hover\:text-red-60:hover {
+      color: var(--Red-60);
+    }
+    .hover\:bg-red-60:hover {
+      background-color: var(--Red-60);
+    }
+    .focus\:text-red-60:focus {
+      color: var(--Red-60);
+    }
+    .focus\:bg-red-60:focus {
+      background-color: var(--Red-60);
+    }
+    .active\:text-red-60:active {
+      color: var(--Red-60);
+    }
+    .active\:bg-red-60:active {
+      background-color: var(--Red-60);
+    }
+
+    /* Escala Red-70 */
     .text-red-70 {
       color: var(--Red-70);
     }
     .bg-red-70 {
       background-color: var(--Red-70);
     }
+    .hover\:text-red-70:hover {
+      color: var(--Red-70);
+    }
+    .hover\:bg-red-70:hover {
+      background-color: var(--Red-70);
+    }
+    .focus\:text-red-70:focus {
+      color: var(--Red-70);
+    }
+    .focus\:bg-red-70:focus {
+      background-color: var(--Red-70);
+    }
+    .active\:text-red-70:active {
+      color: var(--Red-70);
+    }
+    .active\:bg-red-70:active {
+      background-color: var(--Red-70);
+    }
+
+    /* Escala Red-80 */
     .text-red-80 {
       color: var(--Red-80);
     }
     .bg-red-80 {
       background-color: var(--Red-80);
     }
+    .hover\:text-red-80:hover {
+      color: var(--Red-80);
+    }
+    .hover\:bg-red-80:hover {
+      background-color: var(--Red-80);
+    }
+    .focus\:text-red-80:focus {
+      color: var(--Red-80);
+    }
+    .focus\:bg-red-80:focus {
+      background-color: var(--Red-80);
+    }
+    .active\:text-red-80:active {
+      color: var(--Red-80);
+    }
+    .active\:bg-red-80:active {
+      background-color: var(--Red-80);
+    }
+
+    /* Escala Red-90 */
     .text-red-90 {
       color: var(--Red-90);
     }
     .bg-red-90 {
+      background-color: var(--Red-90);
+    }
+    .hover\:text-red-90:hover {
+      color: var(--Red-90);
+    }
+    .hover\:bg-red-90:hover {
+      background-color: var(--Red-90);
+    }
+    .focus\:text-red-90:focus {
+      color: var(--Red-90);
+    }
+    .focus\:bg-red-90:focus {
+      background-color: var(--Red-90);
+    }
+    .active\:text-red-90:active {
+      color: var(--Red-90);
+    }
+    .active\:bg-red-90:active {
       background-color: var(--Red-90);
     }
   
@@ -574,6 +1690,9 @@
       }
     }
   }
+
+
+  
 
     /* ------------------------------ */
     /* TAMAÑOS DE TEXTO */
