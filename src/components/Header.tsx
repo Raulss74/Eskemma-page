@@ -8,15 +8,17 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white-eske text-black-eske py-10 px-14">
+    <header className="bg-white-eske text-black-eske py-10 px-14 sticky top-0 z-50">
       <div className="w-full flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">
+          <a href="/" aria-label="Ir al inicio">
           <img
-            src="/src/assets/img/esk_log_csm.svg" // Asegúrate de que el archivo logo.svg esté en la carpeta pública o assets
+            src="/src/assets/img/esk_log_csm.svg" 
             alt="Logo"
-            className="h-16 w-auto" // Ajusta el tamaño del logo según sea necesario
+            className="h-16 w-auto" 
           />
+          </a>
         </div>
 
         {/* Ícono de Hamburguesa y Elementos de la Derecha */}
@@ -52,47 +54,74 @@ const Header = () => {
             <nav>
               <ul className="flex flex-col space-y-2 px-8">
                 <li>
-                  <a href="/" className="hover:text-bluegreen-eske hover:font-bold">
+                  <a
+                    href="/"
+                    className="block px-4 py-2 rounded hover:bg-blue-eske hover:text-white hover:font-bold transition-colors duration-300"
+                  >
                     INICIO
                   </a>
                 </li>
                 <li>
-                  <a href="/sefix" className="hover:text-bluegreen-eske hover:font-bold">
+                  <a
+                    href="/sefix"
+                    className="block px-4 py-2 rounded hover:bg-blue-eske hover:text-white hover:font-bold transition-colors duration-300"
+                  >
                     SEFIX
-                  </a>
+                  </a>                                 
                 </li>
                 <li>
-                  <a href="/canvas" className="hover:text-bluegreen-eske hover:font-bold">
+                  <a
+                    href="/canvas"
+                    className="block px-4 py-2 rounded hover:bg-blue-eske hover:text-white hover:font-bold transition-colors duration-300"
+                  >
                     CANVAS
                   </a>
                 </li>
                 <li>
-                  <a href="/monitor" className="hover:text-bluegreen-eske hover:font-bold">
+                  <a
+                    href="/monitor"
+                    className="block px-4 py-2 rounded hover:bg-blue-eske hover:text-white hover:font-bold transition-colors duration-300"
+                  >
                     MONITOR
                   </a>
                 </li>
                 <li>
-                  <a href="/cursos" className="hover:text-bluegreen-eske hover:font-bold">
+                  <a
+                    href="/cursos"
+                    className="block px-4 py-2 rounded hover:bg-blue-eske hover:text-white hover:font-bold transition-colors duration-300"
+                  >
                     CURSOS
                   </a>
                 </li>
                 <li>
-                  <a href="/consultoria" className="hover:text-bluegreen-eske hover:font-bold">
+                  <a
+                    href="/consultoria"
+                    className="block px-4 py-2 rounded hover:bg-blue-eske hover:text-white hover:font-bold transition-colors duration-300"
+                  >
                     CONSULTORÍA
                   </a>
                 </li>
                 <li>
-                  <a href="/elbauldefouche" className="hover:text-bluegreen-eske hover:font-bold">
+                  <a
+                    href="/elbauldefouche"
+                    className="block px-4 py-2 rounded hover:bg-blue-eske hover:text-white hover:font-bold transition-colors duration-300"
+                  >
                     EL BAÚL DE FOUCHÉ
                   </a>
                 </li>
                 <li>
-                  <a href="/recursos" className="hover:text-bluegreen-eske hover:font-bold">
+                  <a
+                    href="/recursos"
+                    className="block px-4 py-2 rounded hover:bg-blue-eske hover:text-white hover:font-bold transition-colors duration-300"
+                  >
                     RECURSOS
                   </a>
                 </li>
                 <li>
-                  <a href="/contacto" className="hover:text-bluegreen-eske hover:font-bold">
+                  <a
+                    href="/contacto"
+                    className="block px-4 py-2 rounded hover:bg-blue-eske hover:text-white hover:font-bold transition-colors duration-300"
+                  >
                     CONTACTO
                   </a>
                 </li>

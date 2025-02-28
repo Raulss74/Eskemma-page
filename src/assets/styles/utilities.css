@@ -1,7 +1,7 @@
-/* src/utilities.css */
+/* src/assets/styles/utilities.css */
 
 /* Extensión de utilidades */
-@layer utilities {
+
     /* ------------------------------ */
     /* COLORES - Blue */
     /* ------------------------------ */
@@ -17,9 +17,10 @@
     .hover\:text-blue-eske:hover {
       color: var(--Blue-eske);
     }
+
     .hover\:bg-blue-eske:hover {
       background-color: var(--Blue-eske);
-    }
+    }    
 
     /* Focus */
     .focus\:text-blue-eske:focus {
@@ -495,7 +496,7 @@
     /* ------------------------------ */
     .text-white-eske {
       color: var(--White-eske);
-    }
+    }    
     .bg-white-eske {
       background-color: var(--White-eske);
     }
@@ -1689,17 +1690,12 @@
         text-align: center;
       }
     }
-  }
-
-
   
 
     /* ------------------------------ */
     /* TAMAÑOS DE TEXTO */
     /* ------------------------------ */
 
-/* Extensión de utilidades */
-@layer utilities {
     /* Tamaños de texto personalizados */
     .text-6px {
         font-size: 0.6rem; /* 6px */
@@ -1737,4 +1733,4 @@
     .text-48px {
       font-size: 4.8rem; /* 48px */
     }
-  }
+  
