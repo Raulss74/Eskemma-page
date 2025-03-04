@@ -1,33 +1,29 @@
 // src/pages/Home.tsx
+import React from "react";
+
 const Home = () => {
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen bg-blue-eske">
-      {/* Sección Hero */}
-      <section className="text-center">
-        <h1 className="font-brand-primary text-4xl font-bold text-brand-primary">Bienvenido a Mi Aplicación</h1>
-        <p className="mt-4 text-lg text-gray-600">
-          Descubre cómo nuestra plataforma puede ayudarte a alcanzar tus objetivos.
-        </p>
-        <button className="mt-6 bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700">
-          Comenzar Ahora
-        </button>
+    <main className="min-h-screen">
+      {/* Hero Section */}
+      <section
+        className="relative h-screen bg-cover bg-center flex items-center justify-center"
+        style={{
+          backgroundImage: "url('/path-to-your-hero-image.jpg')", // Cambia esto por la ruta de tu imagen
+        }}
+      >
+        {/* Overlay Azul */}
+        <div className="absolute inset-0 bg-blue-eske opacity-80"></div>
+
+        {/* Contenido del Hero */}
+        <div className="relative z-10 text-center text-white">
+          <h1 className="text-48px font-bold">Consultoría política</h1>
+          <p className="mt-4 text-24px">Un ecosistema digital para tu proyecto político</p>
+          <p className="mt-4 text-20px">Descubre tus ventajas competitivas.</p>
+          <p className="mt-4 text-20px">Te acompañamos con tecnología y datos.</p>
+        </div>
       </section>
 
-      {/* Sección Características */}
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div className="bg-white p-6 rounded-lg shadow-md text-center">
-          <h2 className="text-xl font-bold text-gray-800">Característica 1</h2>
-          <p className="mt-2 text-gray-600">Descripción breve de la característica.</p>
-        </div>
-        <div className="bg-white p-6 rounded-lg shadow-md text-center">
-          <h2 className="text-xl font-bold text-gray-800">Característica 2</h2>
-          <p className="mt-2 text-gray-600">Descripción breve de la característica.</p>
-        </div>
-        <div className="bg-white p-6 rounded-lg shadow-md text-center">
-          <h2 className="text-xl font-bold text-gray-800">Característica 3</h2>
-          <p className="mt-2 text-gray-600">Descripción breve de la característica.</p>
-        </div>
-      </section>
+      {/* Continuaremos aquí con las siguientes secciones */}
     </main>
   );
 };
