@@ -74,7 +74,7 @@ const Header = () => {
                     href="/canvas"
                     className="block px-4 py-2 rounded hover:bg-blue-eske hover:text-white hover:font-bold transition-colors duration-300"
                   >
-                    CANVAS
+                    MODDULO
                   </a>
                 </li>
                 <li>
