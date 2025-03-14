@@ -8,7 +8,7 @@ const Home = () => {
       <div className="flex flex-col min-h-screen">
         {/* Hero Section */}
         <section
-          className="relative min-h-[600px] w-full bg-cover bg-center flex items-center justify-center overflow-hidden"
+          className="relative min-h-[650px] w-full bg-cover bg-center flex items-center justify-center overflow-hidden"
           style={{
             backgroundImage: "url(/src/assets/img/hero.webp)",
             backgroundSize: "cover",
@@ -120,7 +120,7 @@ const Home = () => {
 
         {/* Enlaces Rápidos Section */}
         <section
-          className="bg-gray-10 min-h-[400px] py-24 px-4 sm:px-6 md:px-8"
+          className="bg-gray-10 min-h-[500px] py-24 px-4 sm:px-6 md:px-8"
           style={{ backgroundColor: "var(--Gray-10)" }}
         >
           <div className="w-[90%] mx-auto max-w-screen-xl">
@@ -129,83 +129,162 @@ const Home = () => {
               {/* Moddulo */}
               <a
                 href="./moddulo"
-                className="flex flex-col items-center text-center text-blue-eske hover:text-blue-60 transition-all duration-300 ease-in-out"
+                className="flex flex-col items-center text-center text-blue-eske hover:text-blue-80 transition-all duration-300 ease-in-out"
               >
                 <img
                   src="/src/assets/img/icons/icon_Moddulo.svg" // Ruta del ícono
                   alt="Moddulo"
-                  className="w-48 h-48 mb-4 transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-lg" // Efecto hover
+                  className="w-48 h-48 mb-4 transition-transform duration-300 ease-in-out hover:scale-110" // Aumento de tamaño
                 />
-                <span className="text-14px font-medium">Moddulo</span>
+                <span className="text-14px font-medium hover:text-blue-80">Moddulo</span>
               </a>
 
               {/* Sefix */}
               <a
                 href="/sefix"
-                className="flex flex-col items-center text-center text-blue-eske hover:text-blue-60 transition-all duration-300 ease-in-out"
+                className="flex flex-col items-center text-center text-blue-eske hover:text-blue-80 transition-all duration-300 ease-in-out"
               >
                 <img
                   src="/src/assets/img/icons/icon_Sefix.svg" // Ruta del ícono
                   alt="Sefix"
-                  className="w-48 h-48 mb-4 transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-lg" // Efecto hover
+                  className="w-48 h-48 mb-4 transition-transform duration-300 ease-in-out hover:scale-110" // Aumento de tamaño
                 />
-                <span className="text-14px font-medium">Sefix</span>
+                <span className="text-14px font-medium hover:text-blue-80">Sefix</span>
               </a>
 
               {/* Consultoría */}
               <a
                 href="/consultoria"
-                className="flex flex-col items-center text-center text-blue-eske hover:text-blue-60 transition-all duration-300 ease-in-out"
+                className="flex flex-col items-center text-center text-blue-eske hover:text-blue-80 transition-all duration-300 ease-in-out"
               >
                 <img
                   src="/src/assets/img/icons/icon_Consultoría.svg" // Ruta del ícono
                   alt="Consultoría"
-                  className="w-48 h-48 mb-4 transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-lg" // Efecto hover
+                  className="w-48 h-48 mb-4 transition-transform duration-300 ease-in-out hover:scale-110" // Aumento de tamaño
                 />
-                <span className="text-14px font-medium">Consultoría</span>
+                <span className="text-14px font-medium hover:text-blue-80">Consultoría</span>
               </a>
 
               {/* Cursos */}
               <a
                 href="/cursos"
-                className="flex flex-col items-center text-center text-blue-eske hover:text-blue-60 transition-all duration-300 ease-in-out mt-12"
+                className="flex flex-col items-center text-center text-blue-eske hover:text-blue-80 transition-all duration-300 ease-in-out mt-12"
               >
                 <img
                   src="/src/assets/img/icons/icon_Cursos.svg" // Ruta del ícono
                   alt="Cursos"
-                  className="w-48 h-48 mb-4 transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-lg" // Efecto hover
+                  className="w-48 h-48 mb-4 transition-transform duration-300 ease-in-out hover:scale-110" // Aumento de tamaño
                 />
-                <span className="text-14px font-medium">Cursos</span>
+                <span className="text-14px font-medium hover:text-blue-80">Cursos</span>
               </a>
 
               {/* Monitor */}
               <a
                 href="/monitor"
-                className="flex flex-col items-center text-center text-blue-eske hover:text-blue-60 transition-all duration-300 ease-in-out mt-12"
+                className="flex flex-col items-center text-center text-blue-eske hover:text-blue-80 transition-all duration-300 ease-in-out mt-12"
               >
                 <img
                   src="/src/assets/img/icons/icon_Monitor.svg" // Ruta del ícono
                   alt="Monitor"
-                  className="w-48 h-48 mb-4 transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-lg" // Efecto hover
+                  className="w-48 h-48 mb-4 transition-transform duration-300 ease-in-out hover:scale-110" // Aumento de tamaño
                 />
-                <span className="text-14px font-medium">Monitor</span>
+                <span className="text-14px font-medium hover:text-blue-80">Monitor</span>
               </a>
 
               {/* Software */}
               <a
                 href="/software"
-                className="flex flex-col items-center text-center text-blue-eske hover:text-blue-60 transition-all duration-300 ease-in-out mt-12"
+                className="flex flex-col items-center text-center text-blue-eske hover:text-blue-80 transition-all duration-300 ease-in-out mt-12"
               >
                 <img
                   src="/src/assets/img/icons/icon_Producción.svg" // Ruta del ícono
                   alt="Software"
-                  className="w-48 h-48 mb-4 transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-lg" // Efecto hover
+                  className="w-48 h-48 mb-4 transition-transform duration-300 ease-in-out hover:scale-110" // Aumento de tamaño
                 />
-                <span className="text-14px font-medium">Software</span>
+                <span className="text-14px font-medium hover:text-blue-80">Software</span>
               </a>
             </div>
           </div>
         </section>
+
+        {/* Sección - Propuesta */}
+        <section          
+          className="bg-bluegreen-eske min-h-[500px] py-20 px-4 sm:px-6 md:px-8"
+          style={{ backgroundColor: "var(--Bluegreen-eske)" }}
+        >
+          <div className="w-[90%] mx-auto max-w-screen-xl flex flex-col md:flex-row items-center">
+            {/* Mitad Izquierda - Gráfico GIF */}
+            <div className="w-full md:w-1/2 mb-8 md:mb-0">
+              <img
+                src="/src/assets/img/tiempo.gif" // Ruta del archivo GIF
+                alt="Gráfico Propuesta"
+                className="w-full h-auto rounded-lg shadow-lg"
+              />
+            </div>
+
+            {/* Mitad Derecha - Texto */}
+            <div className="w-full md:w-1/2 pl-0 md:pl-12 text-14px text-center text-white-eske">
+              <p className=" font-light mb-4">
+                <span>Nunca es demasiado pronto.</span>
+                <span className="block">Comencemos a planear tu estrategia.</span>
+              </p>
+              <p className="mt-24 font-light mb-4">
+                <span>Haz que cada decisión sea efectiva</span>
+                <span className="block">en el contexto de tu proyecto.</span>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Sexta Sección - Sobre Nosotros */}
+        <section className="bg-white-eske h-[1000px] py-24 px-4 sm:px-6 md:px-8">
+          <div className="w-[90%] mx-auto max-w-screen-xl text-center">
+            {/* Subtítulo */}
+            <h2 className="text-24px font-medium text-blue-eske mb-6">Sobre nosotros</h2>
+
+            {/* Párrafo Principal */}
+            <p className="text-14px font-normal text-gray-700 mb-6">
+              Nuestro propósito es profesionalizar la vida pública.
+            </p>
+
+            {/* Recuadro para el Video */}
+            <div className="relative w-full max-w-[700px] mx-auto h-96 bg-gray-100 rounded-lg overflow-hidden shadow-lg mb-8">
+              <iframe
+                src="https://drive.google.com/file/d/1fUcRvFJJTxOTuCN1Nf725J0s8eglMM9O/preview"
+                title="Video sobre nosotros"
+                className="absolute top-0 left-0 w-full h-full border-0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+
+            {/* Enlace "Ver más" */}
+            <button
+              className="text-12px font-medium text-blue-eske hover:text-blue-80  focus:outline-none"
+              onClick={() => {
+                // Aquí puedes agregar la lógica para abrir el modal
+                console.log("Abrir modal con más información");
+              }}
+            >
+              Ver más
+            </button>
+
+            {/* Párrafo Adicional */}
+            <p className="mt-16 text-14px font-normal text-gray-700 mb-8">
+              Podemos colaborar desde ahora con una asesoría gratuita de 20 minutos.
+            </p>
+
+            {/* Botón "AGENDAR ASESORÍA GRATUITA" */}
+            <a
+              href="#"
+              className="inline-block bg-orange-eske text-white-eske text-12px font-bold uppercase px-8 py-4 rounded-lg shadow-md hover:bg-orange-70 transition-all duration-300 ease-in-out"
+            >
+              AGENDAR ASESORÍA GRATUITA
+            </a>
+          </div>
+        </section>
+
+        
         
       </div>
     </main>
