@@ -16,7 +16,7 @@ const Header = () => {
             <img
               src="/src/assets/img/esk_log_csm.svg"
               alt="Logo"
-              className="h-6 w-auto sm:h-14 md:h-12" 
+              className="h-6 w-auto sm:h-8 md:h-10" 
             />
           </a>
         </div>

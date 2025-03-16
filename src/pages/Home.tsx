@@ -1,5 +1,7 @@
-
 import blogPosts from "../data/blogData";
+import TeamModal from "../components/TeamModal"
+import FaqSection from "../components/FaqSection";
+
 
 const Home = () => {
   return (
@@ -16,7 +18,7 @@ const Home = () => {
           }}
         >
           {/* Contenido del Hero */}
-          <div className="absolute inset-0 bg-bluegreen-90 opacity-80"></div>
+          <div className="absolute inset-0 bg-bluegreen-70 opacity-70"></div>
           <div className="relative z-10 text-center text-white-eske px-4 sm:px-6 md:px-8 max-w-screen-xl mx-auto w-full">            
             <h1 className="text-[clamp(24px,5vw,48px)] leading-tight">
               Consultoría política
@@ -38,7 +40,7 @@ const Home = () => {
           style={{ backgroundColor: "var(--Gray-10)" }}
         >
           <div className="w-[90%] mx-auto max-w-screen-xl">
-            <h2 className="text-24px font-bold text-center text-bluegreen-eske mb-12">
+            <h2 className="text-20px font-bold text-center text-bluegreen-eske mb-12">
               Hoy en Eskemma 
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -50,11 +52,11 @@ const Home = () => {
                     className="w-full h-auto object-contain rounded-lg mb-4"
                     style={{ aspectRatio: "16 / 9" }}
                   />
-                  <h3 className="text-14px text-blue-70 font-bold mb-2">{post.title}</h3>
-                  <p className="text-12px text-gray-70 mb-4">{post.excerpt}</p>
+                  <h3 className="text-12px text-blue-70 font-light mb-2">{post.title}</h3>
+                  <p className="text-10px font-light text-gray-90 mb-4">{post.excerpt}</p>
                   <a
                     href={post.link}
-                    className="text-blue-eske hover:text-blue-60 font-medium text-10px"
+                    className="text-blue-eske hover:text-blue-60 font-medium text-8px"
                   >
                     Leer completo
                   </a>
@@ -71,7 +73,7 @@ const Home = () => {
         >
           <div className="w-[90%] mx-auto max-w-screen-xl">
             {/* Título de la sección */}
-            <h2 className="text-24px font-bold text-center text-bluegreen-eske mb-12">
+            <h2 className="text-20px font-bold text-center text-bluegreen-eske mb-12">
               Información relevante
             </h2>
 
@@ -85,12 +87,12 @@ const Home = () => {
                   className="w-full h-auto object-contain rounded-lg mb-4"
                   style={{ aspectRatio: "16 / 9" }}
                 />
-                <p className="text-12px text-gray-70 mb-4">
+                <p className="text-10px text-gray-70 mb-4">
                   Tendencia positiva de participación electoral.
                 </p>
                 <a
                   href="/monitor/post1" // Enlace a la página Monitor
-                  className="text-blue-eske hover:text-blue-60 font-medium text-10px"
+                  className="text-blue-eske hover:text-blue-60 font-medium text-8px"
                 >
                   Consultar información
                 </a>
@@ -104,12 +106,12 @@ const Home = () => {
                   className="w-full h-auto object-contain rounded-lg mb-4"
                   style={{ aspectRatio: "16 / 9" }}
                 />
-                <p className="text-12px text-gray-70 mb-4">
+                <p className="text-10px text-gray-80 mb-4">
                   Análisis de la distribución demográfica por región.
                 </p>
                 <a
                   href="/monitor/post2" // Enlace a la página Monitor
-                  className="text-blue-eske hover:text-blue-60 font-medium text-10px"
+                  className="text-blue-eske hover:text-blue-60 font-medium text-8px"
                 >
                   Consultar información
                 </a>
@@ -136,7 +138,7 @@ const Home = () => {
                   alt="Moddulo"
                   className="w-48 h-48 mb-4 transition-transform duration-300 ease-in-out hover:scale-110" // Aumento de tamaño
                 />
-                <span className="text-14px font-medium hover:text-blue-80">Moddulo</span>
+                <span className="text-12px font-medium hover:text-blue-80">Moddulo</span>
               </a>
 
               {/* Sefix */}
@@ -149,7 +151,7 @@ const Home = () => {
                   alt="Sefix"
                   className="w-48 h-48 mb-4 transition-transform duration-300 ease-in-out hover:scale-110" // Aumento de tamaño
                 />
-                <span className="text-14px font-medium hover:text-blue-80">Sefix</span>
+                <span className="text-12px font-medium hover:text-blue-80">Sefix</span>
               </a>
 
               {/* Consultoría */}
@@ -162,7 +164,7 @@ const Home = () => {
                   alt="Consultoría"
                   className="w-48 h-48 mb-4 transition-transform duration-300 ease-in-out hover:scale-110" // Aumento de tamaño
                 />
-                <span className="text-14px font-medium hover:text-blue-80">Consultoría</span>
+                <span className="text-12px font-medium hover:text-blue-80">Consultoría</span>
               </a>
 
               {/* Cursos */}
@@ -175,7 +177,7 @@ const Home = () => {
                   alt="Cursos"
                   className="w-48 h-48 mb-4 transition-transform duration-300 ease-in-out hover:scale-110" // Aumento de tamaño
                 />
-                <span className="text-14px font-medium hover:text-blue-80">Cursos</span>
+                <span className="text-12px font-medium hover:text-blue-80">Cursos</span>
               </a>
 
               {/* Monitor */}
@@ -188,7 +190,7 @@ const Home = () => {
                   alt="Monitor"
                   className="w-48 h-48 mb-4 transition-transform duration-300 ease-in-out hover:scale-110" // Aumento de tamaño
                 />
-                <span className="text-14px font-medium hover:text-blue-80">Monitor</span>
+                <span className="text-12px font-medium hover:text-blue-80">Monitor</span>
               </a>
 
               {/* Software */}
@@ -197,11 +199,11 @@ const Home = () => {
                 className="flex flex-col items-center text-center text-blue-eske hover:text-blue-80 transition-all duration-300 ease-in-out mt-12"
               >
                 <img
-                  src="/src/assets/img/icons/icon_Producción.svg" // Ruta del ícono
+                  src="/src/assets/img/icons/icon_Software.svg" // Ruta del ícono
                   alt="Software"
                   className="w-48 h-48 mb-4 transition-transform duration-300 ease-in-out hover:scale-110" // Aumento de tamaño
                 />
-                <span className="text-14px font-medium hover:text-blue-80">Software</span>
+                <span className="text-12px font-medium hover:text-blue-80">Software</span>
               </a>
             </div>
           </div>
@@ -237,7 +239,9 @@ const Home = () => {
         </section>
 
         {/* Sexta Sección - Sobre Nosotros */}
-        <section className="bg-white-eske h-[1000px] py-24 px-4 sm:px-6 md:px-8">
+        <section 
+          className="bg-white-eske h-[1000px] py-24 px-4 sm:px-6 md:px-8"
+        >
           <div className="w-[90%] mx-auto max-w-screen-xl text-center">
             {/* Subtítulo */}
             <h2 className="text-24px font-medium text-blue-eske mb-6">Sobre nosotros</h2>
@@ -248,7 +252,7 @@ const Home = () => {
             </p>
 
             {/* Recuadro para el Video */}
-            <div className="relative w-full max-w-[700px] mx-auto h-96 bg-gray-100 rounded-lg overflow-hidden shadow-lg mb-8">
+            <div className="relative w-full max-w-[680px] mx-auto h-96 bg-gray-100 rounded-lg overflow-hidden shadow-lg mb-8">
               <iframe
                 src="https://drive.google.com/file/d/1fUcRvFJJTxOTuCN1Nf725J0s8eglMM9O/preview"
                 title="Video sobre nosotros"
@@ -258,16 +262,8 @@ const Home = () => {
               ></iframe>
             </div>
 
-            {/* Enlace "Ver más" */}
-            <button
-              className="text-12px font-medium text-blue-eske hover:text-blue-80  focus:outline-none"
-              onClick={() => {
-                // Aquí puedes agregar la lógica para abrir el modal
-                console.log("Abrir modal con más información");
-              }}
-            >
-              Ver más
-            </button>
+            {/* Modal de Equipo */}
+            <TeamModal />
 
             {/* Párrafo Adicional */}
             <p className="mt-16 text-14px font-normal text-gray-700 mb-8">
@@ -284,7 +280,322 @@ const Home = () => {
           </div>
         </section>
 
-        
+        {/* Sección - Beneficios */}
+        <section
+          className="bg-bluegreen-eske min-h-[800px] py-20 px-4 sm:px-6 md:px-8"
+          style={{ backgroundColor: "var(--Bluegreen-eske)" }}
+        >
+          <div className="w-[90%] mx-auto max-w-screen-xl mt-4">            
+
+            {/* Contenedor Reducido en Anchura (10%) */}
+            <div className="mx-auto w-[90%] max-w-[90%]">
+              {/* Grilla de Tarjetas */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                {/* Fila 1 */}
+                <div className="flex items-center justify-center bg-blue-60 p-6 rounded-lg shadow-lg h-48">
+                  <p className="text-12px text-white-eske font-light text-center">
+                    Acompañamiento profesional
+                  </p>
+                </div>
+                <div className="flex items-center justify-center bg-white-eske p-6 rounded-lg shadow-lg h-48">
+                  <p className="text-12px text-bluegreen-eske font-light text-center">
+                    Resultados inmediatos
+                  </p>
+                </div>
+                <div className="flex items-center justify-center bg-bluegreen-60 p-6 rounded-lg shadow-lg h-48">
+                  <p className="text-12px text-white-eske font-light text-center">
+                    Una inversión inteligente
+                  </p>
+                </div>
+
+                {/* Fila 2 */}
+                <div className="flex items-center justify-center bg-bluegreen-60 p-6 rounded-lg shadow-lg h-48">
+                  <p className="text-12px text-white-eske font-light text-center">
+                    No importa el tamaño de tu proyecto político
+                  </p>
+                </div>
+                <div className="flex items-center justify-center bg-white-eske p-6 rounded-lg shadow-lg h-48">
+                  <p className="text-12px text-bluegreen-eske font-light text-center">
+                    Metodologías para hallar tus ventajas competitivas.
+                  </p>
+                </div>
+                <div className="flex items-center justify-center bg-blue-60 p-6 rounded-lg shadow-lg h-48">
+                  <p className="text-12px text-white-eske font-light text-center">
+                    Herramientas e información útil sin pagar más
+                  </p>
+                </div>
+
+                {/* Fila 3 */}
+                <div className="flex items-center justify-center bg-blue-60 p-6 rounded-lg shadow-lg h-48">
+                  <p className="text-12px text-white-eske font-light text-center">
+                    Te acompañamos con honestidad y profesionalismo.
+                  </p>
+                </div>
+                <div className="flex items-center justify-center bg-white-eske p-6 rounded-lg shadow-lg h-48">
+                  <p className="text-12px text-bluegreen-eske font-light text-center">
+                    Ejecuta acciones inmediatas.
+                  </p>
+                </div>
+                <div className="flex items-center justify-center bg-bluegreen-60 p-6 rounded-lg shadow-lg h-48">
+                  <p className="text-12px text-white-eske font-light text-center">
+                    Asesoría de especialistas en todo momento.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Sección - Testimonios */}
+        <section
+          className="bg-gray-10 min-h-[600px] py-20 px-4 sm:px-6 md:px-8"
+          style={{ backgroundColor: "var(--Gray-10)" }}
+        >
+          <div className="w-[90%] mx-auto max-w-screen-xl">
+            {/* Contenedor de Testimonios */}
+            <div className="space-y-12">
+              {/* Testimonio 1 */}
+              <div className="flex items-center space-x-8">
+                {/* Avatar (Primera Columna) */}
+                <div className="w-16 h-16 rounded-full bg-blue-60 flex items-center justify-center overflow-hidden">
+                  <img
+                    src="https://untitledui.com/images/avatars/brianna-ware" // Ruta de la imagen del usuario
+                    alt="Usuario 1"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                {/* Texto (Segunda Columna) */}
+                <blockquote className="text-12px text-gray-90 font-light max-w-[70%]">
+                  "Cuando pensé que no había nada más que hacer en mi candidatura decidí utilizar el <i>Moddulo</i> de Eskemma. Descubrí que había muchas opciones para competir con fuerza."
+                </blockquote>
+              </div>
+
+              {/* Testimonio 2 */}
+              <div className="flex items-center justify-end space-x-8">
+                {/* Texto (Primera Columna) */}
+                <blockquote className="text-12px text-gray-90 font-light max-w-[70%] text-right">
+                  "En los cursos de comunicación política siempre hablan de estrateegia, pero hasta ahora sé cómo hacerlo en territorio, no sólo en teoría."
+                </blockquote>
+                {/* Avatar (Segunda Columna) */}
+                <div className="w-16 h-16 rounded-full bg-orange-60 flex items-center justify-center overflow-hidden">
+                  <img
+                    src="https://untitledui.com/images/avatars/drew-cano" // Ruta de la imagen del usuario
+                    alt="Usuario 2"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Testimonio 3 */}
+              <div className="flex items-center space-x-8">
+                {/* Avatar (Primera Columna) */}
+                <div className="w-16 h-16 rounded-full bg-green-60 flex items-center justify-center overflow-hidden">
+                  <img
+                    src="https://untitledui.com/images/avatars/ethan-valdez" // Ruta de la imagen del usuario
+                    alt="Usuario 3"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                {/* Texto (Segunda Columna) */}
+                <blockquote className="text-12px text-gray-90 font-light max-w-[70%]">
+                  "Con su ayuda logré analizar mejor la información y saber cómo aventajar a los otros partidos. Lo mejor es que lo hice yo mismo y me ahorré una lana."
+                </blockquote>
+              </div>
+
+              {/* Testimonio 4 */}
+              <div className="flex items-center justify-end space-x-8">
+                {/* Texto (Primera Columna) */}
+                <blockquote className="text-12px text-gray-90 font-light max-w-[70%] text-right">
+                  "Pensé que estos servicios sóo eran para grandes campañas. Participé en una elección local en 2024 y pude utilizar mucha de la ayuda que me brindaron."
+                </blockquote>
+                {/* Avatar (Segunda Columna) */}
+                <div className="w-16 h-16 rounded-full bg-red-60 flex items-center justify-center overflow-hidden">
+                  <img
+                    src="https://untitledui.com/images/avatars/ava-bentley" // Ruta de la imagen del usuario
+                    alt="Usuario 4"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Novena Sección - Planes */}
+        <section
+          className="bg-white-eske min-h-[800px] py-18 px-4 sm:px-6 md:px-8"
+          style={{ backgroundColor: "var(--White-eske)" }}
+        >
+          <div className="w-[90%] mx-auto max-w-screen-xl">
+            {/* Título de la Sección */}
+            <h2 className="text-16px font-light text-center text-bluegreen-eske mb-6">
+              Selecciona el mejor plan para tu proyecto político
+            </h2>
+
+            {/* Párrafo Descriptivo */}
+            <p className="text-14px font-light text-center text-gray mb-16 max-w-[600px] mx-auto">
+              <span>Suscríbete y accede al</span>
+              <br />
+              <span>ecosistema digital de Eskemma</span>
+            </p>
+
+            {/* Contenedor de las Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Card 1 - Sólo un producto */}
+              <div className="bg-white-10 rounded-lg shadow-lg p-6 text-center relative overflow-visible w-full max-w-[350px] mx-auto">
+                {/* Encabezado con fondo white-eske */}
+                <div
+                  className="absolute top-[-15px] left-1/2 transform -translate-x-1/2 bg-white-eske px-4 py-2 border border-bluegreen-eske text-black text-10px font-medium z-10"
+                  style={{ boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)" }}
+                >
+                  Sólo un producto
+                </div>
+
+                {/* Contenido de la card */}
+                <div className="relative z-0">
+                  {/* Título del Plan */}
+                  <h3 className="text-12px font-medium text-bluegreen-eske mt-6 mb-4">
+                    Plan Básico
+                  </h3>
+
+                  {/* Detalles del Plan */}
+                  <div className="text-left text-10px text-gray space-y-2">
+                    <p>Mensual</p>
+                    <p>Para 1 persona</p>
+                    <p className="mt-4 text-10px">
+                      <strong>Obtienes:</strong>
+                    </p>
+                    <p>Acceso a la plataforma de formación, Sefix, Moddulo o Monitor</p>
+                    <p>Asistencia online 24/7</p>
+                    <p>Acceso total a eBooks y plantillas</p>
+                  </div>
+
+                  {/* Bandera y Precio */}
+                  <div className="flex items-center justify-start mt-6 mb-6">
+                    {/* Bandera */}
+                    <div className="w-8 h-8 rounded-full bg-gray-20 flex items-center justify-center mr-4">
+                      <img
+                        src="https://www.banderas-mundo.es/data/flags/w1160/mx.webp" // Ruta de la imagen de la bandera
+                        alt="Bandera de México"
+                        className="w-full h-full object-cover rounded-full"
+                      />
+                    </div>
+                    {/* Precio */}
+                    <p className="text-12px font-bold text-black">$ 2,000 MX / mes</p>
+                  </div>
+
+                  {/* Botón Suscribirme */}
+                  <button className="mt-8 w-full bg-white-eske text-gray text-10px font-bold uppercase py-3 rounded-lg shadow-md border border-bluegreen-eske hover:bg-bluegreen-eske hover:text-white-eske transition-all duration-300 ease-in-out">
+                    SUSCRIBIRME
+                  </button>
+                </div>
+              </div>
+
+              {/* Card 2 - Todo Eskemma */}
+              <div className="bg-white-10 rounded-lg shadow-lg p-6 text-center relative overflow-visible w-full max-w-[350px] mx-auto">
+                {/* Encabezado con fondo white-eske */}
+                <div
+                  className="absolute top-[-15px] left-1/2 transform -translate-x-1/2 bg-black px-4 py-2 border border-bluegreen-eske text-white-eske text-10px font-medium z-10"
+                  style={{ boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)" }}
+                >
+                  Todo Eskemma
+                </div>
+
+                {/* Contenido de la card */}
+                <div className="relative z-0">
+                  {/* Título del Plan */}
+                  <h3 className="text-12px font-medium text-bluegreen-eske mt-6 mb-4">
+                    Plan Premium
+                  </h3>
+
+                  {/* Detalles del Plan */}
+                  <div className="text-left text-10px text-gray space-y-2">
+                    <p>Mensual</p>
+                    <p>Para 1 persona</p>
+                    <p className="mt-4 text-10px">
+                      <strong>Obtienes Plan Básico +</strong>
+                    </p>
+                    <p>Acceso total al ecosistema de Eskemma</p>
+                    <p>Acceso a recursos exclusivos</p>
+                    <p>1 sesión de asesoría gratuita al mes</p>
+                  </div>
+
+                  {/* Bandera y Precio */}
+                  <div className="flex items-center justify-start mt-6 mb-6">
+                    {/* Bandera */}
+                    <div className="w-8 h-8 rounded-full bg-gray-20 flex items-center justify-center mr-4">
+                      <img
+                        src="https://www.banderas-mundo.es/data/flags/w1160/mx.webp" // Ruta de la imagen de la bandera
+                        alt="Bandera de México"
+                        className="w-full h-full object-cover rounded-full"
+                      />
+                    </div>
+                    {/* Precio */}
+                    <p className="text-12px font-bold text-black">$ 3,000 MX / mes</p>
+                  </div>
+
+                  {/* Botón Suscribirme */}
+                  <button className="mt-8 w-full bg-orange-eske text-white-eske text-10px font-bold uppercase py-3 rounded-lg shadow-md border border-bluegreen-eske hover:bg-bluegreen-eske hover:text-white-eske transition-all duration-300 ease-in-out">
+                    SUSCRIBIRME
+                  </button>
+                </div>
+              </div>
+
+              {/* Card 3 - Trabajo colaborativo */}
+              <div className="bg-white-10 rounded-lg shadow-lg p-6 text-center relative overflow-visible w-full max-w-[350px] mx-auto">
+                {/* Encabezado con fondo white-eske */}
+                <div
+                  className="absolute top-[-15px] left-1/2 transform -translate-x-1/2 bg-white-eske px-6 py-2 border border-bluegreen-eske text-black text-10px font-medium z-10 whitespace-nowrap"
+                  style={{ boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)" }}
+                >
+                  Trabajo Colaborativo
+                </div>
+
+                {/* Contenido de la card */}
+                <div className="relative z-0">
+                  {/* Título del Plan */}
+                  <h3 className="text-12px font-medium text-bluegreen-eske mt-6 mb-4">
+                    Plan Grupal
+                  </h3>
+
+                  {/* Detalles del Plan */}
+                  <div className="text-left text-10px text-gray space-y-2">
+                    <p>Mensual</p>
+                    <p>Para 6 personas</p>
+                    <p className="mt-4 text-10px">
+                      <strong>Obtienes Plan Premium +</strong>
+                    </p>
+                    <p>Versión colaborativa</p>
+                    <p>Acceso a recursos grupales</p>
+                    <p>2 sesiones de asesoría gratuita al mes</p>                    
+                  </div>
+
+                  {/* Bandera y Precio */}
+                  <div className="flex items-center justify-start mt-6 mb-6">
+                    {/* Bandera */}
+                    <div className="w-8 h-8 rounded-full bg-gray-20 flex items-center justify-center mr-4">
+                      <img
+                        src="https://www.banderas-mundo.es/data/flags/w1160/mx.webp" // Ruta de la imagen de la bandera
+                        alt="Bandera de México"
+                        className="w-full h-full object-cover rounded-full"
+                      />
+                    </div>
+                    {/* Precio */}
+                    <p className="text-12px font-bold text-black">$ 15,000 MX / mes</p>
+                  </div>
+
+                  {/* Botón Suscribirme */}
+                  <button className="mt-8 w-full bg-white-eske text-gray text-10px font-bold uppercase py-3 rounded-lg shadow-md border border-bluegreen-eske hover:bg-bluegreen-eske hover:text-white-eske transition-all duration-300 ease-in-out">
+                    SUSCRIBIRME
+                  </button>
+                </div>
+              </div>              
+            </div>
+          </div>
+        </section>
+
+        {/* Décima Sección - FAQ */}
+        <FaqSection />
         
       </div>
     </main>

@@ -500,6 +500,9 @@
     .bg-white-eske {
       background-color: var(--White-eske);
     }
+    .hover\:text-white-eske:hover {
+      color: var(--White-eske);
+    }
     .text-white-10 {
       color: var(--White-10);
     }
