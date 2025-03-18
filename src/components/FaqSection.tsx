@@ -17,7 +17,7 @@ const FaqSection = () => {
     >
       <div className="w-[90%] mx-auto max-w-screen-xl">
         {/* Título de la Sección */}
-        <h2 className="text-16px font-medium text-bluegreen-eske text-center mb-12">
+        <h2 className="text-20px font-bold text-bluegreen-eske text-center mb-12">
           Preguntas frecuentes
         </h2>
 
@@ -219,7 +219,7 @@ const FaqSection = () => {
           <p className="text-16px font-medium text-bluegreen-eske">
             ¡Conéctate con el éxito político!
           </p>
-          <p className="text-14px font-normal text-gray">
+          <p className="text-12px font-normal text-gray">
             Queremos ser tus aliados para impulsar tu proyecto.
           </p>
         </div>
@@ -228,7 +228,7 @@ const FaqSection = () => {
         <div className="text-center mt-8">
           <a
             href="/contacto"
-            className="inline-block bg-bluegreen-eske text-white-eske text-12px font-bold uppercase px-8 py-4 rounded-lg shadow-md hover:bg-bluegreen-70 transition-all duration-300 ease-in-out"
+            className="inline-block bg-bluegreen-eske text-white-eske text-10px font-bold uppercase px-8 py-4 rounded-lg shadow-md hover:bg-bluegreen-70 transition-all duration-300 ease-in-out"
           >
             CONTACTAR CON ESKEMMA
           </a>

@@ -2,10 +2,14 @@
 
 import { useState } from "react";
 import { Bars3Icon } from "@heroicons/react/24/solid"; // Importar el ícono de hamburguesa
+import RegisterModal from "./RegisterModal"; // Importar el modal de registro
 
 const Header = () => {
   // Estado para controlar la visibilidad del menú hamburguesa
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Estado para controlar la visibilidad del modal de registro
+  const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
 
   return (
     <header className="bg-white-eske text-black-eske py-4 px-6 sm:px-10 md:px-14 sticky top-0 z-50">
@@ -33,10 +37,13 @@ const Header = () => {
 
           {/* Texto y Avatar */}
           <div className="hidden md:flex items-center space-x-4">
-            <span className="text-sm sm:text-base font-medium hover:text-blue-70 cursor-pointer  ml-2">
+            <span
+              className="text-10px font-medium hover:text-blue-70 cursor-pointer ml-2"
+              onClick={() => setIsRegisterModalOpen(true)} // Abrir el modal de registro
+            >
               REGÍSTRATE
             </span>
-            <span className="text-sm sm:text-base font-medium hover:text-blue-70 cursor-pointer">
+            <span className="text-10px font-medium hover:text-blue-70 cursor-pointer">
               INICIAR SESIÓN
             </span>
             <div className="w-10 h-10 sm:w-12 sm:h-12 bg-orange-400 rounded-full flex items-center justify-center">
@@ -130,6 +137,12 @@ const Header = () => {
           </div>
         </div>
       </div>
+
+      {/* Modal de Registro */}
+      <RegisterModal
+        isOpen={isRegisterModalOpen}
+        onClose={() => setIsRegisterModalOpen(false)}
+      />
     </header>
   );
 };

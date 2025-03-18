@@ -20,14 +20,14 @@ const Home = () => {
           {/* Contenido del Hero */}
           <div className="absolute inset-0 bg-bluegreen-70 opacity-70"></div>
           <div className="relative z-10 text-center text-white-eske px-4 sm:px-6 md:px-8 max-w-screen-xl mx-auto w-full">            
-            <h1 className="text-[clamp(24px,5vw,48px)] leading-tight">
+            <h1 className="text-30px leading-tight">
               Consultoría política
             </h1>
-            <h2 className="mt-20 text-[clamp(18px,4vw,36px)] leading-tight">
+            <h2 className="mt-20 text-24px leading-tight">
               <span>Un ecosistema digital</span>
               <span className="block">para tu proyecto político</span>
             </h2>
-            <div className="mt-[10vh] space-y-4 text-[clamp(18px,3vw,20px)] w-full">
+            <div className="mt-[10vh] space-y-4 text-14px w-full">
               <p>Descubre tus ventajas competitivas.</p>
               <p>Te acompañamos con tecnología y datos.</p>
             </div>
@@ -52,11 +52,11 @@ const Home = () => {
                     className="w-full h-auto object-contain rounded-lg mb-4"
                     style={{ aspectRatio: "16 / 9" }}
                   />
-                  <h3 className="text-12px text-blue-70 font-light mb-2">{post.title}</h3>
-                  <p className="text-10px font-light text-gray-90 mb-4">{post.excerpt}</p>
+                  <h3 className="text-12px text-blue-70 font-medium mb-2">{post.title}</h3>
+                  <p className="text-10px font-light text-gray mb-4">{post.excerpt}</p>
                   <a
                     href={post.link}
-                    className="text-blue-eske hover:text-blue-60 font-medium text-8px"
+                    className="text-blue-eske hover:text-blue-60 font-medium text-10px"
                   >
                     Leer completo
                   </a>
@@ -87,7 +87,7 @@ const Home = () => {
                   className="w-full h-auto object-contain rounded-lg mb-4"
                   style={{ aspectRatio: "16 / 9" }}
                 />
-                <p className="text-10px text-gray-70 mb-4">
+                <p className="text-12px text-gray mb-4">
                   Tendencia positiva de participación electoral.
                 </p>
                 <a
@@ -106,108 +106,19 @@ const Home = () => {
                   className="w-full h-auto object-contain rounded-lg mb-4"
                   style={{ aspectRatio: "16 / 9" }}
                 />
-                <p className="text-10px text-gray-80 mb-4">
+                <p className="text-12px text-gray mb-4">
                   Análisis de la distribución demográfica por región.
                 </p>
                 <a
                   href="/monitor/post2" // Enlace a la página Monitor
-                  className="text-blue-eske hover:text-blue-60 font-medium text-8px"
+                  className="text-blue-eske hover:text-blue-60 font-medium text-10px"
                 >
                   Consultar información
                 </a>
               </div>
             </div>
           </div>
-        </section>
-
-        {/* Enlaces Rápidos Section */}
-        <section
-          className="bg-gray-10 min-h-[500px] py-24 px-4 sm:px-6 md:px-8"
-          style={{ backgroundColor: "var(--Gray-10)" }}
-        >
-          <div className="w-[90%] mx-auto max-w-screen-xl">
-            {/* Grilla de enlaces */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Moddulo */}
-              <a
-                href="./moddulo"
-                className="flex flex-col items-center text-center text-blue-eske hover:text-blue-80 transition-all duration-300 ease-in-out"
-              >
-                <img
-                  src="/src/assets/img/icons/icon_Moddulo.svg" // Ruta del ícono
-                  alt="Moddulo"
-                  className="w-48 h-48 mb-4 transition-transform duration-300 ease-in-out hover:scale-110" // Aumento de tamaño
-                />
-                <span className="text-12px font-medium hover:text-blue-80">Moddulo</span>
-              </a>
-
-              {/* Sefix */}
-              <a
-                href="/sefix"
-                className="flex flex-col items-center text-center text-blue-eske hover:text-blue-80 transition-all duration-300 ease-in-out"
-              >
-                <img
-                  src="/src/assets/img/icons/icon_Sefix.svg" // Ruta del ícono
-                  alt="Sefix"
-                  className="w-48 h-48 mb-4 transition-transform duration-300 ease-in-out hover:scale-110" // Aumento de tamaño
-                />
-                <span className="text-12px font-medium hover:text-blue-80">Sefix</span>
-              </a>
-
-              {/* Consultoría */}
-              <a
-                href="/consultoria"
-                className="flex flex-col items-center text-center text-blue-eske hover:text-blue-80 transition-all duration-300 ease-in-out"
-              >
-                <img
-                  src="/src/assets/img/icons/icon_Consultoría.svg" // Ruta del ícono
-                  alt="Consultoría"
-                  className="w-48 h-48 mb-4 transition-transform duration-300 ease-in-out hover:scale-110" // Aumento de tamaño
-                />
-                <span className="text-12px font-medium hover:text-blue-80">Consultoría</span>
-              </a>
-
-              {/* Cursos */}
-              <a
-                href="/cursos"
-                className="flex flex-col items-center text-center text-blue-eske hover:text-blue-80 transition-all duration-300 ease-in-out mt-12"
-              >
-                <img
-                  src="/src/assets/img/icons/icon_Cursos.svg" // Ruta del ícono
-                  alt="Cursos"
-                  className="w-48 h-48 mb-4 transition-transform duration-300 ease-in-out hover:scale-110" // Aumento de tamaño
-                />
-                <span className="text-12px font-medium hover:text-blue-80">Cursos</span>
-              </a>
-
-              {/* Monitor */}
-              <a
-                href="/monitor"
-                className="flex flex-col items-center text-center text-blue-eske hover:text-blue-80 transition-all duration-300 ease-in-out mt-12"
-              >
-                <img
-                  src="/src/assets/img/icons/icon_Monitor.svg" // Ruta del ícono
-                  alt="Monitor"
-                  className="w-48 h-48 mb-4 transition-transform duration-300 ease-in-out hover:scale-110" // Aumento de tamaño
-                />
-                <span className="text-12px font-medium hover:text-blue-80">Monitor</span>
-              </a>
-
-              {/* Software */}
-              <a
-                href="/software"
-                className="flex flex-col items-center text-center text-blue-eske hover:text-blue-80 transition-all duration-300 ease-in-out mt-12"
-              >
-                <img
-                  src="/src/assets/img/icons/icon_Software.svg" // Ruta del ícono
-                  alt="Software"
-                  className="w-48 h-48 mb-4 transition-transform duration-300 ease-in-out hover:scale-110" // Aumento de tamaño
-                />
-                <span className="text-12px font-medium hover:text-blue-80">Software</span>
-              </a>
-            </div>
-          </div>
-        </section>
+        </section>        
 
         {/* Sección - Propuesta */}
         <section          
@@ -225,7 +136,7 @@ const Home = () => {
             </div>
 
             {/* Mitad Derecha - Texto */}
-            <div className="w-full md:w-1/2 pl-0 md:pl-12 text-14px text-center text-white-eske">
+            <div className="w-full md:w-1/2 pl-0 md:pl-12 text-12px text-center text-white-eske">
               <p className=" font-light mb-4">
                 <span>Nunca es demasiado pronto.</span>
                 <span className="block">Comencemos a planear tu estrategia.</span>
@@ -240,14 +151,14 @@ const Home = () => {
 
         {/* Sexta Sección - Sobre Nosotros */}
         <section 
-          className="bg-white-eske h-[1000px] py-24 px-4 sm:px-6 md:px-8"
+          className="bg-white-eske h-[1000px] py-20 px-4 sm:px-6 md:px-8"
         >
           <div className="w-[90%] mx-auto max-w-screen-xl text-center">
             {/* Subtítulo */}
-            <h2 className="text-24px font-medium text-blue-eske mb-6">Sobre nosotros</h2>
+            <h2 className="text-20px font-bold text-bluegreen-eske mb-6">Sobre nosotros</h2>
 
             {/* Párrafo Principal */}
-            <p className="text-14px font-normal text-gray-700 mb-6">
+            <p className="text-12px font-normal text-gray-700 mb-6">
               Nuestro propósito es profesionalizar la vida pública.
             </p>
 
@@ -266,14 +177,14 @@ const Home = () => {
             <TeamModal />
 
             {/* Párrafo Adicional */}
-            <p className="mt-16 text-14px font-normal text-gray-700 mb-8">
+            <p className="mt-16 text-12px font-normal text-gray-700 mb-8">
               Podemos colaborar desde ahora con una asesoría gratuita de 20 minutos.
             </p>
 
             {/* Botón "AGENDAR ASESORÍA GRATUITA" */}
             <a
               href="#"
-              className="inline-block bg-orange-eske text-white-eske text-12px font-bold uppercase px-8 py-4 rounded-lg shadow-md hover:bg-orange-70 transition-all duration-300 ease-in-out"
+              className="inline-block bg-orange-eske text-white-eske text-10px font-bold uppercase px-8 py-4 rounded-lg shadow-md hover:bg-orange-70 transition-all duration-300 ease-in-out"
             >
               AGENDAR ASESORÍA GRATUITA
             </a>
@@ -374,7 +285,7 @@ const Home = () => {
               <div className="flex items-center justify-end space-x-8">
                 {/* Texto (Primera Columna) */}
                 <blockquote className="text-12px text-gray-90 font-light max-w-[70%] text-right">
-                  "En los cursos de comunicación política siempre hablan de estrateegia, pero hasta ahora sé cómo hacerlo en territorio, no sólo en teoría."
+                  "En los cursos de comunicación política siempre hablan de estrategia, pero hasta ahora sé cómo hacerlo en territorio, no sólo en teoría."
                 </blockquote>
                 {/* Avatar (Segunda Columna) */}
                 <div className="w-16 h-16 rounded-full bg-orange-60 flex items-center justify-center overflow-hidden">
@@ -421,19 +332,19 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Novena Sección - Planes */}
+        {/* Sección - Planes */}
         <section
           className="bg-white-eske min-h-[800px] py-18 px-4 sm:px-6 md:px-8"
           style={{ backgroundColor: "var(--White-eske)" }}
         >
           <div className="w-[90%] mx-auto max-w-screen-xl">
             {/* Título de la Sección */}
-            <h2 className="text-16px font-light text-center text-bluegreen-eske mb-6">
+            <h2 className="text-20px font-bold text-center text-bluegreen-eske mb-6">
               Selecciona el mejor plan para tu proyecto político
             </h2>
 
             {/* Párrafo Descriptivo */}
-            <p className="text-14px font-light text-center text-gray mb-16 max-w-[600px] mx-auto">
+            <p className="text-14px font-light text-center text-gray mb-18 max-w-[600px] mx-auto">
               <span>Suscríbete y accede al</span>
               <br />
               <span>ecosistema digital de Eskemma</span>
@@ -445,8 +356,8 @@ const Home = () => {
               <div className="bg-white-10 rounded-lg shadow-lg p-6 text-center relative overflow-visible w-full max-w-[350px] mx-auto">
                 {/* Encabezado con fondo white-eske */}
                 <div
-                  className="absolute top-[-15px] left-1/2 transform -translate-x-1/2 bg-white-eske px-4 py-2 border border-bluegreen-eske text-black text-10px font-medium z-10"
-                  style={{ boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)" }}
+                  className="absolute top-[-15px] left-1/2 transform -translate-x-1/2 bg-white-eske px-6 py-2 border border-bluegreen-eske text-black text-10px font-medium z-10 whitespace-nowrap"
+                  style={{ boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.2)" }}
                 >
                   Sólo un producto
                 </div>
@@ -495,8 +406,8 @@ const Home = () => {
               <div className="bg-white-10 rounded-lg shadow-lg p-6 text-center relative overflow-visible w-full max-w-[350px] mx-auto">
                 {/* Encabezado con fondo white-eske */}
                 <div
-                  className="absolute top-[-15px] left-1/2 transform -translate-x-1/2 bg-black px-4 py-2 border border-bluegreen-eske text-white-eske text-10px font-medium z-10"
-                  style={{ boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)" }}
+                  className="absolute top-[-15px] left-1/2 transform -translate-x-1/2 bg-black-eske px-6 py-2 border border-bluegreen-eske text-white-eske text-10px font-medium z-10 whitespace-nowrap"
+                  style={{ boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.2)" }}
                 >
                   Todo Eskemma
                 </div>
@@ -531,7 +442,7 @@ const Home = () => {
                       />
                     </div>
                     {/* Precio */}
-                    <p className="text-12px font-bold text-black">$ 3,000 MX / mes</p>
+                    <p className="text-12px font-bold text-black">$ 4,000 MX / mes</p>
                   </div>
 
                   {/* Botón Suscribirme */}
@@ -546,7 +457,7 @@ const Home = () => {
                 {/* Encabezado con fondo white-eske */}
                 <div
                   className="absolute top-[-15px] left-1/2 transform -translate-x-1/2 bg-white-eske px-6 py-2 border border-bluegreen-eske text-black text-10px font-medium z-10 whitespace-nowrap"
-                  style={{ boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)" }}
+                  style={{ boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.2)" }}
                 >
                   Trabajo Colaborativo
                 </div>
@@ -566,7 +477,7 @@ const Home = () => {
                       <strong>Obtienes Plan Premium +</strong>
                     </p>
                     <p>Versión colaborativa</p>
-                    <p>Acceso a recursos grupales</p>
+                    <p>Acceso a recursos exclusivos para grupos</p>
                     <p>2 sesiones de asesoría gratuita al mes</p>                    
                   </div>
 
@@ -581,7 +492,7 @@ const Home = () => {
                       />
                     </div>
                     {/* Precio */}
-                    <p className="text-12px font-bold text-black">$ 15,000 MX / mes</p>
+                    <p className="text-12px font-bold text-black">$ 20,000 MX / mes</p>
                   </div>
 
                   {/* Botón Suscribirme */}
@@ -594,8 +505,97 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Décima Sección - FAQ */}
+        {/* Sección - FAQ */}
         <FaqSection />
+
+        {/* Enlaces Rápidos Section */}
+        <section
+          className="bg-white-eske min-h-[500px] py-20 px-4 sm:px-6 md:px-8"
+          style={{ backgroundColor: "var(--white-eske)" }}
+        >
+          <div className="w-[90%] mx-auto max-w-screen-xl">
+            {/* Grilla de enlaces */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Moddulo */}
+              <a
+                href="./moddulo"
+                className="flex flex-col items-center text-center text-blue-eske hover:text-blue-80 transition-all duration-300 ease-in-out"
+              >
+                <img
+                  src="/src/assets/img/icons/icon_Moddulo.svg" // Ruta del ícono
+                  alt="Moddulo"
+                  className="w-48 h-48 mb-4 transition-transform duration-300 ease-in-out hover:scale-110" // Aumento de tamaño
+                />
+                <span className="text-12px font-medium hover:text-blue-80">Moddulo</span>
+              </a>
+
+              {/* Sefix */}
+              <a
+                href="/sefix"
+                className="flex flex-col items-center text-center text-blue-eske hover:text-blue-80 transition-all duration-300 ease-in-out"
+              >
+                <img
+                  src="/src/assets/img/icons/icon_Sefix.svg" // Ruta del ícono
+                  alt="Sefix"
+                  className="w-48 h-48 mb-4 transition-transform duration-300 ease-in-out hover:scale-110" // Aumento de tamaño
+                />
+                <span className="text-12px font-medium hover:text-blue-80">Sefix</span>
+              </a>
+
+              {/* Consultoría */}
+              <a
+                href="/consultoria"
+                className="flex flex-col items-center text-center text-blue-eske hover:text-blue-80 transition-all duration-300 ease-in-out"
+              >
+                <img
+                  src="/src/assets/img/icons/icon_Consultoría.svg" // Ruta del ícono
+                  alt="Consultoría"
+                  className="w-48 h-48 mb-4 transition-transform duration-300 ease-in-out hover:scale-110" // Aumento de tamaño
+                />
+                <span className="text-12px font-medium hover:text-blue-80">Consultoría</span>
+              </a>
+
+              {/* Cursos */}
+              <a
+                href="/cursos"
+                className="flex flex-col items-center text-center text-blue-eske hover:text-blue-80 transition-all duration-300 ease-in-out mt-12"
+              >
+                <img
+                  src="/src/assets/img/icons/icon_Cursos.svg" // Ruta del ícono
+                  alt="Cursos"
+                  className="w-48 h-48 mb-4 transition-transform duration-300 ease-in-out hover:scale-110" // Aumento de tamaño
+                />
+                <span className="text-12px font-medium hover:text-blue-80">Cursos</span>
+              </a>
+
+              {/* Monitor */}
+              <a
+                href="/monitor"
+                className="flex flex-col items-center text-center text-blue-eske hover:text-blue-80 transition-all duration-300 ease-in-out mt-12"
+              >
+                <img
+                  src="/src/assets/img/icons/icon_Monitor.svg" // Ruta del ícono
+                  alt="Monitor"
+                  className="w-48 h-48 mb-4 transition-transform duration-300 ease-in-out hover:scale-110" // Aumento de tamaño
+                />
+                <span className="text-12px font-medium hover:text-blue-80">Monitor</span>
+              </a>
+
+              {/* Software */}
+              <a
+                href="/software"
+                className="flex flex-col items-center text-center text-blue-eske hover:text-blue-80 transition-all duration-300 ease-in-out mt-12"
+              >
+                <img
+                  src="/src/assets/img/icons/icon_Software.svg" // Ruta del ícono
+                  alt="Software"
+                  className="w-48 h-48 mb-4 transition-transform duration-300 ease-in-out hover:scale-110" // Aumento de tamaño
+                />
+                <span className="text-12px font-medium hover:text-blue-80">Software</span>
+              </a>
+            </div>
+          </div>
+        </section>
         
       </div>
     </main>
