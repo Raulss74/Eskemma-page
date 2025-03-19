@@ -1,4 +1,6 @@
-import { useState } from "react";
+//components/RegiserModal.tsx
+
+import { useState } from 'react';
 
 interface RegisterFormData {
   name: string;
@@ -14,30 +16,38 @@ interface RegisterFormData {
 
 export default function RegisterModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   const [formData, setFormData] = useState<RegisterFormData>({
-    name: "",
-    lastName: "",
-    gender: "",
-    country: "",
-    role: "",
-    email: "",
-    username: "",
-    password: "",
-    confirmPassword: "",
+    name: '',
+    lastName: '',
+    gender: '',
+    country: '',
+    role: '',
+    email: '',
+    username: '', // Este campo se llenará automáticamente con el valor de `name`
+    password: '',
+    confirmPassword: '',
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
 
     // Validación específica para el campo 'lastName' (permite letras, acentos, diéresis, espacios y ñ)
-    if (name === "lastName") {
-      const isValid = /^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]*$/.test(value.trim());
+    if (name === 'lastName') {
+      const isValid = /^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]*$/.test(value); // Permite letras, acentos, diéresis, espacios y ñ
       if (!isValid) return; // Si no es válido, no actualizamos el estado
     }
 
-    // Validación específica para el campo 'name' (permite letras, acentos, diéresis y ñ)
-    if (name === "name") {
-      const isValid = /^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ]+$/.test(value);
+    // Validación específica para el campo 'name' (permite letras, acentos, diéresis, espacios y ñ)
+    if (name === 'name') {
+      const isValid = /^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+$/.test(value); // Permite letras, acentos, diéresis, espacios y ñ
       if (!isValid) return; // Si no es válido, no actualizamos el estado
+
+      // Actualizar automáticamente el campo 'username' con el valor de 'name'
+      setFormData((prev) => ({
+        ...prev,
+        [name]: value,
+        username: value.toLowerCase().replace(/\s+/g, ''), // Eliminar espacios y convertir a minúsculas
+      }));
+      return; // Salimos temprano para evitar duplicar la actualización del estado
     }
 
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -47,10 +57,10 @@ export default function RegisterModal({ isOpen, onClose }: { isOpen: boolean; on
     e.preventDefault();
     // Validaciones adicionales antes de enviar el formulario
     if (formData.password !== formData.confirmPassword) {
-      alert("Las contraseñas no coinciden");
+      alert('Las contraseñas no coinciden');
       return;
     }
-    console.log("Datos del formulario:", formData);
+    console.log('Datos del formulario:', formData);
     onClose(); // Cerrar el modal después de enviar
   };
 
@@ -59,11 +69,11 @@ export default function RegisterModal({ isOpen, onClose }: { isOpen: boolean; on
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center"
-      style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}
+      style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }}
     >
       <div
         className="bg-white-eske rounded-lg shadow-lg w-full max-w-md p-6 relative overflow-y-auto max-h-[80vh]"
-        style={{ marginTop: "20px" }} // Espacio superior para mejorar la composición
+        style={{ marginTop: '20px' }} // Espacio superior para mejorar la composición
       >
         {/* Botón de Cierre */}
         <button
@@ -96,8 +106,7 @@ export default function RegisterModal({ isOpen, onClose }: { isOpen: boolean; on
                 value={formData.name}
                 onChange={handleChange}
                 required
-                pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ]+"
-                title="Solo se permiten letras, incluyendo acentos y diéresis."
+                title="Solo se permiten letras y espacios, incluyendo acentos y diéresis."
                 className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-eske"
               />
             </div>
@@ -111,7 +120,6 @@ export default function RegisterModal({ isOpen, onClose }: { isOpen: boolean; on
                 value={formData.lastName}
                 onChange={handleChange}
                 required
-                pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+$"
                 title="Introduce uno o más apellidos separados por espacios, incluyendo acentos y diéresis."
                 className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-eske"
               />
@@ -127,7 +135,7 @@ export default function RegisterModal({ isOpen, onClose }: { isOpen: boolean; on
                     type="radio"
                     name="gender"
                     value="Mujer"
-                    checked={formData.gender === "Mujer"}
+                    checked={formData.gender === 'Mujer'}
                     onChange={handleChange}
                     className="w-4 h-4"
                   />
@@ -140,7 +148,7 @@ export default function RegisterModal({ isOpen, onClose }: { isOpen: boolean; on
                     type="radio"
                     name="gender"
                     value="Hombre"
-                    checked={formData.gender === "Hombre"}
+                    checked={formData.gender === 'Hombre'}
                     onChange={handleChange}
                     className="w-4 h-4"
                   />
@@ -153,7 +161,7 @@ export default function RegisterModal({ isOpen, onClose }: { isOpen: boolean; on
                     type="radio"
                     name="gender"
                     value="No binario"
-                    checked={formData.gender === "No binario"}
+                    checked={formData.gender === 'No binario'}
                     onChange={handleChange}
                     className="w-4 h-4"
                   />
@@ -177,20 +185,9 @@ export default function RegisterModal({ isOpen, onClose }: { isOpen: boolean; on
                   <option value="México">México</option>
                   <option value="Estados Unidos">Estados Unidos</option>
                   <option value="Canadá">Canadá</option>
-                  {/* Agregar más países de América aquí */}
                 </optgroup>
                 <optgroup label="Europa">
                   <option value="España">España</option>
-                  {/* Agregar más países de Europa aquí */}
-                </optgroup>
-                <optgroup label="Asia">
-                  {/* Agregar países de Asia aquí */}
-                </optgroup>
-                <optgroup label="Oceanía">
-                  {/* Agregar países de Oceanía aquí */}
-                </optgroup>
-                <optgroup label="África">
-                  {/* Agregar países de África aquí */}
                 </optgroup>
               </select>
             </div>
@@ -211,9 +208,7 @@ export default function RegisterModal({ isOpen, onClose }: { isOpen: boolean; on
                 <option value="Integrante de Partido Político">Integrante de Partido Político</option>
                 <option value="Integrante de Campaña">Integrante de Campaña</option>
                 <option value="Servidor/a Público">Servidor/a Público</option>
-                <option value="Integrante de ONG">Integrante de ONG</option>
-                <option value="Docente">Docente</option>
-                <option value="Estudiante">Estudiante</option>
+                <option value="Academia">Academia</option>
                 <option value="Otro">Otro</option>
               </select>
             </div>
@@ -283,7 +278,7 @@ export default function RegisterModal({ isOpen, onClose }: { isOpen: boolean; on
 
             {/* Condiciones de uso */}
             <p className="mt-4 text-8px text-gray-700 text-center">
-              Al registrarme acepto las{" "}
+              Al registrarme acepto las{' '}
               <a
                 href="/politica-de-privacidad"
                 target="_blank" // Abrir en una nueva ventana
@@ -291,7 +286,7 @@ export default function RegisterModal({ isOpen, onClose }: { isOpen: boolean; on
                 className="text-blue-eske underline"
               >
                 condiciones de uso y política de privacidad
-              </a>{" "}
+              </a>{' '}
               de Eskemma.
             </p>
 
@@ -300,7 +295,7 @@ export default function RegisterModal({ isOpen, onClose }: { isOpen: boolean; on
 
             {/* Iniciar Sesión */}
             <p className="text-8px text-gray-700 text-center">
-              ¿Ya te has registrado?{" "}
+              ¿Ya te has registrado?{' '}
               <a href="#" className="text-blue-eske underline">
                 Inicia sesión
               </a>
