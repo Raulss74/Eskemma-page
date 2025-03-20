@@ -1,9 +1,16 @@
-// src/components/FaqSection.tsx
 import { useState } from "react";
+import GuestContactModal from "./GuestContactModal"; // Importar el modal de contacto para invitados
+import RegisterModal from "./RegisterModal"; // Importar el modal de registro
+import LoginModal from "./LoginModal"; // Importar el modal de inicio de sesión
 
 const FaqSection = () => {
-  // Estado para controlar qué dropdown está abierto
+  // Estados para controlar qué dropdown está abierto
   const [openDropdown, setOpenDropdown] = useState<number | null>(null);
+
+  // Estados para controlar la visibilidad de los modales
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
 
   // Función para alternar el estado del dropdown
   const toggleDropdown = (index: number) => {
@@ -53,7 +60,10 @@ const FaqSection = () => {
             {openDropdown === 1 && (
               <div className="mt-4 text-10px text-gray">
                 <p>
-                  Eskemma es un ecosistema digital para el triunfo político. Te invitamos a explorar los recursos gratuitos y de pago para tu proyecto y que nos permiten acompañarte permanentemente hacia el logro de tus objetivos políticos.
+                  Eskemma es un ecosistema digital para el triunfo político.
+                  Te invitamos a explorar los recursos gratuitos y de pago para
+                  tu proyecto y que nos permiten acompañarte permanentemente
+                  hacia el logro de tus objetivos políticos.
                 </p>
               </div>
             )}
@@ -89,7 +99,8 @@ const FaqSection = () => {
             {openDropdown === 2 && (
               <div className="mt-4 text-10px text-gray">
                 <p>
-                  Puedes agendar una asesoría gratuita haciendo clic en el botón "AGENDAR ASESORÍA GRATUITA" en esta página.
+                  Puedes agendar una asesoría gratuita haciendo clic en el
+                  botón "AGENDAR ASESORÍA GRATUITA" en esta página.
                 </p>
               </div>
             )}
@@ -125,7 +136,8 @@ const FaqSection = () => {
             {openDropdown === 3 && (
               <div className="mt-4 text-10px text-gray">
                 <p>
-                  Eskemma combina tecnología, análisis de datos y experiencia política para ofrecer soluciones personalizadas y efectivas.
+                  Eskemma combina tecnología, análisis de datos y experiencia
+                  política para ofrecer soluciones personalizadas y efectivas.
                 </p>
               </div>
             )}
@@ -161,7 +173,8 @@ const FaqSection = () => {
             {openDropdown === 4 && (
               <div className="mt-4 text-10px text-gray">
                 <p>
-                  Sí, Eskemma tiene experiencia trabajando en proyectos políticos a nivel internacional. Contáctenos para más detalles.
+                  Sí, Eskemma tiene experiencia trabajando en proyectos
+                  políticos a nivel internacional. Contáctenos para más detalles.
                 </p>
               </div>
             )}
@@ -197,7 +210,9 @@ const FaqSection = () => {
             {openDropdown === 5 && (
               <div className="mt-4 text-10px text-gray">
                 <p>
-                  Los costos varían dependiendo del alcance y la naturaleza del proyecto. Ofrecemos planes personalizados para satisfacer tus necesidades.
+                  Los costos varían dependiendo del alcance y la naturaleza del
+                  proyecto. Ofrecemos planes personalizados para satisfacer tus
+                  necesidades.
                 </p>
               </div>
             )}
@@ -226,13 +241,34 @@ const FaqSection = () => {
 
         {/* Botón CONTACTAR CON ESKEMMA */}
         <div className="text-center mt-8">
-          <a
-            href="/contacto"
+          <button
+            onClick={() => setIsContactModalOpen(true)}
             className="inline-block bg-bluegreen-eske text-white-eske text-10px font-bold uppercase px-8 py-4 rounded-lg shadow-md hover:bg-bluegreen-70 transition-all duration-300 ease-in-out"
           >
             CONTACTAR CON ESKEMMA
-          </a>
+          </button>
         </div>
+
+        {/* Modal de Contacto para Invitados */}
+        <GuestContactModal
+          isOpen={isContactModalOpen}
+          onClose={() => setIsContactModalOpen(false)}
+          onOpenLoginModal={() => setIsLoginModalOpen(true)} // Abrir el modal de inicio de sesión
+          onOpenRegisterModal={() => setIsRegisterModalOpen(true)} // Abrir el modal de registro
+        />
+
+        {/* Modal de Registro */}
+        <RegisterModal
+          isOpen={isRegisterModalOpen}
+          onClose={() => setIsRegisterModalOpen(false)}
+        />
+
+        {/* Modal de Inicio de Sesión */}
+        <LoginModal
+          isOpen={isLoginModalOpen}
+          onClose={() => setIsLoginModalOpen(false)}
+          onOpenRegisterModal={() => setIsRegisterModalOpen(true)} // Abrir el modal de registro
+        />
       </div>
     </section>
   );

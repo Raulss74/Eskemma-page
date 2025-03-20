@@ -10,16 +10,20 @@ export default function GuestContactModal({
   isOpen,
   onClose,
   onOpenLoginModal, // Función para abrir el modal de inicio de sesión
+  onOpenRegisterModal, // Función para abrir el modal de registro
 }: {
   isOpen: boolean;
   onClose: () => void;
   onOpenLoginModal: () => void; // Prop para abrir el modal de inicio de sesión
+  onOpenRegisterModal: () => void; // Prop para abrir el modal de registro
 }) {
   const [formData, setFormData] = useState<GuestContactFormData>({
     fullName: "",
     email: "",
     message: "",
   });
+
+  const [errors, setErrors] = useState<{ email?: string }>({});
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -32,17 +36,31 @@ export default function GuestContactModal({
       if (!isValid) return; // Si no es válido, no actualizamos el estado
     }
 
-    // Validación específica para el campo 'email'
-    if (name === "email") {
-      const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value); // Validación básica de correo electrónico
-      if (!isValid && value !== "") return; // Si no es válido y no está vacío, no actualizamos el estado
+    // Limpiar errores previos mientras el usuario escribe
+    if (name === "email" && errors.email) {
+      setErrors({ ...errors, email: undefined });
     }
 
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const validateEmail = (email: string) => {
+    const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    if (!isValid) {
+      setErrors({ ...errors, email: "Introduce un correo electrónico válido." });
+      return false;
+    }
+    return true;
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Validar el correo electrónico antes de enviar el formulario
+    if (!validateEmail(formData.email)) {
+      return;
+    }
+
     // Aquí puedes agregar la lógica para enviar el mensaje al servidor
     console.log("Datos del formulario de contacto:", formData);
     onClose(); // Cerrar el modal después de enviar
@@ -98,7 +116,7 @@ export default function GuestContactModal({
             onClick={(e) => {
               e.preventDefault();
               onClose(); // Cerrar el modal de contacto
-              // Aquí podrías redirigir al usuario al modal de registro
+              onOpenRegisterModal(); // Abrir el modal de registro
             }}
           >
             Registrarme
@@ -142,10 +160,16 @@ export default function GuestContactModal({
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
+                onBlur={() => validateEmail(formData.email)} // Validar cuando el campo pierde el foco
                 required
                 title="Introduce un correo electrónico válido."
-                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-eske"
+                className={`w-full px-3 py-2 border ${
+                  errors.email ? "border-red-60" : "border-gray-300"
+                } rounded focus:outline-none focus:border-blue-eske`}
               />
+              {errors.email && (
+                <p className="text-8px text-red-60 mt-1">{errors.email}</p>
+              )}
             </div>
 
             {/* Mensaje */}
@@ -170,7 +194,7 @@ export default function GuestContactModal({
             {/* Botón Enviar */}
             <button
               type="submit"
-              className="w-full bg-white-eske text-gray-700 py-2 rounded hover:bg-gray-100 transition-colors duration-300"
+              className="w-full bg-white text-gray-700 py-2 rounded border border-gray-300 hover:bg-blue-eske hover:text-white-eske transition-colors duration-300"
             >
               ENVIAR
             </button>
