@@ -1,9 +1,28 @@
-import blogPosts from "../data/blogData";
-import TeamModal from "../components/TeamModal"
-import FaqSection from "../components/FaqSection";
+import { useState } from 'react';
+import blogPosts from '../data/blogData';
+import TeamModal from '../components/TeamModal';
+import FaqSection from '../components/FaqSection';
+import ScheduleDate from '../components/ScheduleDate';
+import ResponseDate from '../components/ResponseDate';
 
+// Definir el tipo de datos que se espera en onSubmitSuccess
+interface FormData {
+  fullName: string;
+  email: string;
+  dateTime: string;
+}
 
 const Home = () => {
+  const [isScheduleModalOpen, setIsScheduleModalOpen] = useState(false);
+  const [isResponseModalOpen, setIsResponseModalOpen] = useState(false);
+
+  // Estado para almacenar los datos del formulario
+  const [formData, setFormData] = useState<FormData>({
+    fullName: '',
+    email: '',
+    dateTime: '',
+  });
+
   return (
     <main className="min-h-screen overflow-x-hidden w-full">
       {/* Contenedor principal */}
@@ -12,17 +31,15 @@ const Home = () => {
         <section
           className="relative min-h-[650px] w-full bg-cover bg-center flex items-center justify-center overflow-hidden"
           style={{
-            backgroundImage: "url(/src/assets/img/hero.webp)",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundImage: 'url(/src/assets/img/hero.webp)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
           }}
         >
           {/* Contenido del Hero */}
           <div className="absolute inset-0 bg-bluegreen-70 opacity-70"></div>
-          <div className="relative z-10 text-center text-white-eske px-4 sm:px-6 md:px-8 max-w-screen-xl mx-auto w-full">            
-            <h1 className="text-30px leading-tight">
-              Consultoría política
-            </h1>
+          <div className="relative z-10 text-center text-white-eske px-4 sm:px-6 md:px-8 max-w-screen-xl mx-auto w-full">
+            <h1 className="text-30px leading-tight">Consultoría política</h1>
             <h2 className="mt-20 text-24px leading-tight">
               <span>Un ecosistema digital</span>
               <span className="block">para tu proyecto político</span>
@@ -37,23 +54,30 @@ const Home = () => {
         {/* Blog Section */}
         <section
           className="bg-gray-10 min-h-[580px] py-20 px-4 sm:px-6 md:px-8"
-          style={{ backgroundColor: "var(--Gray-10)" }}
+          style={{ backgroundColor: 'var(--Gray-10)' }}
         >
           <div className="w-[90%] mx-auto max-w-screen-xl">
             <h2 className="text-20px font-bold text-center text-bluegreen-eske mb-12">
-              Hoy en Eskemma 
+              Hoy en Eskemma
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {blogPosts.map((post) => (
-                <div key={post.id} className="flex flex-col items-center text-center">
+                <div
+                  key={post.id}
+                  className="flex flex-col items-center text-center"
+                >
                   <img
                     src={post.image}
                     alt={post.title}
                     className="w-full h-auto object-contain rounded-lg mb-4"
-                    style={{ aspectRatio: "16 / 9" }}
+                    style={{ aspectRatio: '16 / 9' }}
                   />
-                  <h3 className="text-12px text-blue-70 font-medium mb-2">{post.title}</h3>
-                  <p className="text-10px font-light text-gray mb-4">{post.excerpt}</p>
+                  <h3 className="text-12px text-blue-70 font-medium mb-2">
+                    {post.title}
+                  </h3>
+                  <p className="text-10px font-light text-gray mb-4">
+                    {post.excerpt}
+                  </p>
                   <a
                     href={post.link}
                     className="text-blue-eske hover:text-blue-60 font-medium text-10px"
@@ -69,7 +93,7 @@ const Home = () => {
         {/* Información Relevante Section */}
         <section
           className="bg-white-eske min-h-[500px] py-20 px-4 sm:px-6 md:px-8"
-          style={{ backgroundColor: "var(--White-eske)" }}
+          style={{ backgroundColor: 'var(--White-eske)' }}
         >
           <div className="w-[90%] mx-auto max-w-screen-xl">
             {/* Título de la sección */}
@@ -85,7 +109,7 @@ const Home = () => {
                   src="/src/assets/img/barras.gif" // Ruta de la imagen/gif
                   alt="Gráfica 1"
                   className="w-full h-auto object-contain rounded-lg mb-4"
-                  style={{ aspectRatio: "16 / 9" }}
+                  style={{ aspectRatio: '16 / 9' }}
                 />
                 <p className="text-12px text-gray mb-4">
                   Tendencia positiva de participación electoral.
@@ -104,7 +128,7 @@ const Home = () => {
                   src="/src/assets/img/box.gif" // Ruta de la imagen/gif
                   alt="Gráfica 2"
                   className="w-full h-auto object-contain rounded-lg mb-4"
-                  style={{ aspectRatio: "16 / 9" }}
+                  style={{ aspectRatio: '16 / 9' }}
                 />
                 <p className="text-12px text-gray mb-4">
                   Análisis de la distribución demográfica por región.
@@ -118,12 +142,12 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </section>        
+        </section>
 
         {/* Sección - Propuesta */}
-        <section          
+        <section
           className="bg-bluegreen-eske min-h-[500px] py-20 px-4 sm:px-6 md:px-8"
-          style={{ backgroundColor: "var(--Bluegreen-eske)" }}
+          style={{ backgroundColor: 'var(--Bluegreen-eske)' }}
         >
           <div className="w-[90%] mx-auto max-w-screen-xl flex flex-col md:flex-row items-center">
             {/* Mitad Izquierda - Gráfico GIF */}
@@ -139,7 +163,9 @@ const Home = () => {
             <div className="w-full md:w-1/2 pl-0 md:pl-12 text-12px text-center text-white-eske">
               <p className=" font-light mb-4">
                 <span>Nunca es demasiado pronto.</span>
-                <span className="block">Comencemos a planear tu estrategia.</span>
+                <span className="block">
+                  Comencemos a planear tu estrategia.
+                </span>
               </p>
               <p className="mt-24 font-light mb-4">
                 <span>Haz que cada decisión sea efectiva</span>
@@ -150,12 +176,12 @@ const Home = () => {
         </section>
 
         {/* Sexta Sección - Sobre Nosotros */}
-        <section 
-          className="bg-white-eske h-[1000px] py-20 px-4 sm:px-6 md:px-8"
-        >
+        <section className="bg-white-eske h-[1000px] py-20 px-4 sm:px-6 md:px-8">
           <div className="w-[90%] mx-auto max-w-screen-xl text-center">
             {/* Subtítulo */}
-            <h2 className="text-20px font-bold text-bluegreen-eske mb-6">Sobre nosotros</h2>
+            <h2 className="text-20px font-bold text-bluegreen-eske mb-6">
+              Sobre nosotros
+            </h2>
 
             {/* Párrafo Principal */}
             <p className="text-12px font-normal text-gray-700 mb-6">
@@ -178,26 +204,47 @@ const Home = () => {
 
             {/* Párrafo Adicional */}
             <p className="mt-16 text-12px font-normal text-gray-700 mb-8">
-              Podemos colaborar desde ahora con una asesoría gratuita de 20 minutos.
+              Podemos colaborar desde ahora con una asesoría gratuita de 20
+              minutos.
             </p>
 
             {/* Botón "AGENDAR ASESORÍA GRATUITA" */}
-            <a
-              href="#"
+            <button
+              onClick={() => setIsScheduleModalOpen(true)} // Abrir el modal
               className="inline-block bg-orange-eske text-white-eske text-10px font-bold uppercase px-8 py-4 rounded-lg shadow-md hover:bg-orange-70 transition-all duration-300 ease-in-out"
             >
               AGENDAR ASESORÍA GRATUITA
-            </a>
+            </button>
+
+            {/* Modal de Agendar Asesoría */}
+            <ScheduleDate
+              isOpen={isScheduleModalOpen} // Controlar la visibilidad del modal
+              onClose={() => setIsScheduleModalOpen(false)} // Cerrar el modal
+              onSubmitSuccess={(data) => {
+                setFormData(data); // Almacenar los datos del formulario
+                setIsResponseModalOpen(true); // Abrir el modal de confirmación
+              }}
+            />
+
+            {/* Modal de Confirmación */}
+            {isResponseModalOpen && (
+              <ResponseDate
+                isOpen={isResponseModalOpen} // Controlar la visibilidad del modal
+                onClose={() => setIsResponseModalOpen(false)} // Cerrar el modal
+                fullName={formData.fullName} // Pasar el nombre del usuario
+                email={formData.email} // Pasar el correo electrónico
+                dateTime={formData.dateTime} // Pasar la fecha y hora seleccionada
+              />
+            )}
           </div>
         </section>
 
         {/* Sección - Beneficios */}
         <section
           className="bg-bluegreen-eske min-h-[800px] py-20 px-4 sm:px-6 md:px-8"
-          style={{ backgroundColor: "var(--Bluegreen-eske)" }}
+          style={{ backgroundColor: 'var(--Bluegreen-eske)' }}
         >
-          <div className="w-[90%] mx-auto max-w-screen-xl mt-4">            
-
+          <div className="w-[90%] mx-auto max-w-screen-xl mt-4">
             {/* Contenedor Reducido en Anchura (10%) */}
             <div className="mx-auto w-[90%] max-w-[90%]">
               {/* Grilla de Tarjetas */}
@@ -260,7 +307,7 @@ const Home = () => {
         {/* Sección - Testimonios */}
         <section
           className="bg-gray-10 min-h-[600px] py-20 px-4 sm:px-6 md:px-8"
-          style={{ backgroundColor: "var(--Gray-10)" }}
+          style={{ backgroundColor: 'var(--Gray-10)' }}
         >
           <div className="w-[90%] mx-auto max-w-screen-xl">
             {/* Contenedor de Testimonios */}
@@ -277,7 +324,9 @@ const Home = () => {
                 </div>
                 {/* Texto (Segunda Columna) */}
                 <blockquote className="text-12px text-gray-90 font-light max-w-[70%]">
-                  "Cuando pensé que no había nada más que hacer en mi candidatura decidí utilizar el <i>Moddulo</i> de Eskemma. Descubrí que había muchas opciones para competir con fuerza."
+                  "Cuando pensé que no había nada más que hacer en mi
+                  candidatura decidí utilizar el <i>Moddulo</i> de Eskemma.
+                  Descubrí que había muchas opciones para competir con fuerza."
                 </blockquote>
               </div>
 
@@ -285,7 +334,9 @@ const Home = () => {
               <div className="flex items-center justify-end space-x-8">
                 {/* Texto (Primera Columna) */}
                 <blockquote className="text-12px text-gray-90 font-light max-w-[70%] text-right">
-                  "En los cursos de comunicación política siempre hablan de estrategia, pero hasta ahora sé cómo hacerlo en territorio, no sólo en teoría."
+                  "En los cursos de comunicación política siempre hablan de
+                  estrategia, pero hasta ahora sé cómo hacerlo en territorio, no
+                  sólo en teoría."
                 </blockquote>
                 {/* Avatar (Segunda Columna) */}
                 <div className="w-16 h-16 rounded-full bg-orange-60 flex items-center justify-center overflow-hidden">
@@ -309,7 +360,9 @@ const Home = () => {
                 </div>
                 {/* Texto (Segunda Columna) */}
                 <blockquote className="text-12px text-gray-90 font-light max-w-[70%]">
-                  "Con su ayuda logré analizar mejor la información y saber cómo aventajar a los otros partidos. Lo mejor es que lo hice yo mismo y me ahorré una lana."
+                  "Con su ayuda logré analizar mejor la información y saber cómo
+                  aventajar a los otros partidos. Lo mejor es que lo hice yo
+                  mismo y me ahorré una lana."
                 </blockquote>
               </div>
 
@@ -317,7 +370,9 @@ const Home = () => {
               <div className="flex items-center justify-end space-x-8">
                 {/* Texto (Primera Columna) */}
                 <blockquote className="text-12px text-gray-90 font-light max-w-[70%] text-right">
-                  "Pensé que estos servicios sóo eran para grandes campañas. Participé en una elección local en 2024 y pude utilizar mucha de la ayuda que me brindaron."
+                  "Pensé que estos servicios sóo eran para grandes campañas.
+                  Participé en una elección local en 2024 y pude utilizar mucha
+                  de la ayuda que me brindaron."
                 </blockquote>
                 {/* Avatar (Segunda Columna) */}
                 <div className="w-16 h-16 rounded-full bg-red-60 flex items-center justify-center overflow-hidden">
@@ -335,7 +390,7 @@ const Home = () => {
         {/* Sección - Planes */}
         <section
           className="bg-white-eske min-h-[800px] py-18 px-4 sm:px-6 md:px-8"
-          style={{ backgroundColor: "var(--White-eske)" }}
+          style={{ backgroundColor: 'var(--White-eske)' }}
         >
           <div className="w-[90%] mx-auto max-w-screen-xl">
             {/* Título de la Sección */}
@@ -357,7 +412,7 @@ const Home = () => {
                 {/* Encabezado con fondo white-eske */}
                 <div
                   className="absolute top-[-15px] left-1/2 transform -translate-x-1/2 bg-white-eske px-6 py-2 border border-bluegreen-eske text-black text-10px font-medium z-10 whitespace-nowrap"
-                  style={{ boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.2)" }}
+                  style={{ boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.2)' }}
                 >
                   Sólo un producto
                 </div>
@@ -376,7 +431,10 @@ const Home = () => {
                     <p className="mt-4 text-10px">
                       <strong>Obtienes:</strong>
                     </p>
-                    <p>Acceso a la plataforma de formación, Sefix, Moddulo o Monitor</p>
+                    <p>
+                      Acceso a la plataforma de formación, Sefix, Moddulo o
+                      Monitor
+                    </p>
                     <p>Asistencia online 24/7</p>
                     <p>Acceso total a eBooks y plantillas</p>
                   </div>
@@ -392,7 +450,9 @@ const Home = () => {
                       />
                     </div>
                     {/* Precio */}
-                    <p className="text-12px font-bold text-black">$ 2,000 MX / mes</p>
+                    <p className="text-12px font-bold text-black">
+                      $ 2,000 MX / mes
+                    </p>
                   </div>
 
                   {/* Botón Suscribirme */}
@@ -407,7 +467,7 @@ const Home = () => {
                 {/* Encabezado con fondo white-eske */}
                 <div
                   className="absolute top-[-15px] left-1/2 transform -translate-x-1/2 bg-black-eske px-6 py-2 border border-bluegreen-eske text-white-eske text-10px font-medium z-10 whitespace-nowrap"
-                  style={{ boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.2)" }}
+                  style={{ boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.2)' }}
                 >
                   Todo Eskemma
                 </div>
@@ -442,7 +502,9 @@ const Home = () => {
                       />
                     </div>
                     {/* Precio */}
-                    <p className="text-12px font-bold text-black">$ 4,000 MX / mes</p>
+                    <p className="text-12px font-bold text-black">
+                      $ 4,000 MX / mes
+                    </p>
                   </div>
 
                   {/* Botón Suscribirme */}
@@ -457,7 +519,7 @@ const Home = () => {
                 {/* Encabezado con fondo white-eske */}
                 <div
                   className="absolute top-[-15px] left-1/2 transform -translate-x-1/2 bg-white-eske px-6 py-2 border border-bluegreen-eske text-black text-10px font-medium z-10 whitespace-nowrap"
-                  style={{ boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.2)" }}
+                  style={{ boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.2)' }}
                 >
                   Trabajo Colaborativo
                 </div>
@@ -478,7 +540,7 @@ const Home = () => {
                     </p>
                     <p>Versión colaborativa</p>
                     <p>Acceso a recursos exclusivos para grupos</p>
-                    <p>2 sesiones de asesoría gratuita al mes</p>                    
+                    <p>2 sesiones de asesoría gratuita al mes</p>
                   </div>
 
                   {/* Bandera y Precio */}
@@ -492,7 +554,9 @@ const Home = () => {
                       />
                     </div>
                     {/* Precio */}
-                    <p className="text-12px font-bold text-black">$ 20,000 MX / mes</p>
+                    <p className="text-12px font-bold text-black">
+                      $ 20,000 MX / mes
+                    </p>
                   </div>
 
                   {/* Botón Suscribirme */}
@@ -500,7 +564,7 @@ const Home = () => {
                     SUSCRIBIRME
                   </button>
                 </div>
-              </div>              
+              </div>
             </div>
           </div>
         </section>
@@ -511,7 +575,7 @@ const Home = () => {
         {/* Enlaces Rápidos Section */}
         <section
           className="bg-white-eske min-h-[500px] py-20 px-4 sm:px-6 md:px-8"
-          style={{ backgroundColor: "var(--white-eske)" }}
+          style={{ backgroundColor: 'var(--white-eske)' }}
         >
           <div className="w-[90%] mx-auto max-w-screen-xl">
             {/* Grilla de enlaces */}
@@ -526,7 +590,9 @@ const Home = () => {
                   alt="Moddulo"
                   className="w-48 h-48 mb-4 transition-transform duration-300 ease-in-out hover:scale-110" // Aumento de tamaño
                 />
-                <span className="text-12px font-medium hover:text-blue-80">Moddulo</span>
+                <span className="text-12px font-medium hover:text-blue-80">
+                  Moddulo
+                </span>
               </a>
 
               {/* Sefix */}
@@ -539,7 +605,9 @@ const Home = () => {
                   alt="Sefix"
                   className="w-48 h-48 mb-4 transition-transform duration-300 ease-in-out hover:scale-110" // Aumento de tamaño
                 />
-                <span className="text-12px font-medium hover:text-blue-80">Sefix</span>
+                <span className="text-12px font-medium hover:text-blue-80">
+                  Sefix
+                </span>
               </a>
 
               {/* Consultoría */}
@@ -552,7 +620,9 @@ const Home = () => {
                   alt="Consultoría"
                   className="w-48 h-48 mb-4 transition-transform duration-300 ease-in-out hover:scale-110" // Aumento de tamaño
                 />
-                <span className="text-12px font-medium hover:text-blue-80">Consultoría</span>
+                <span className="text-12px font-medium hover:text-blue-80">
+                  Consultoría
+                </span>
               </a>
 
               {/* Cursos */}
@@ -565,7 +635,9 @@ const Home = () => {
                   alt="Cursos"
                   className="w-48 h-48 mb-4 transition-transform duration-300 ease-in-out hover:scale-110" // Aumento de tamaño
                 />
-                <span className="text-12px font-medium hover:text-blue-80">Cursos</span>
+                <span className="text-12px font-medium hover:text-blue-80">
+                  Cursos
+                </span>
               </a>
 
               {/* Monitor */}
@@ -578,7 +650,9 @@ const Home = () => {
                   alt="Monitor"
                   className="w-48 h-48 mb-4 transition-transform duration-300 ease-in-out hover:scale-110" // Aumento de tamaño
                 />
-                <span className="text-12px font-medium hover:text-blue-80">Monitor</span>
+                <span className="text-12px font-medium hover:text-blue-80">
+                  Monitor
+                </span>
               </a>
 
               {/* Software */}
@@ -591,12 +665,13 @@ const Home = () => {
                   alt="Software"
                   className="w-48 h-48 mb-4 transition-transform duration-300 ease-in-out hover:scale-110" // Aumento de tamaño
                 />
-                <span className="text-12px font-medium hover:text-blue-80">Software</span>
+                <span className="text-12px font-medium hover:text-blue-80">
+                  Software
+                </span>
               </a>
             </div>
           </div>
         </section>
-        
       </div>
     </main>
   );
