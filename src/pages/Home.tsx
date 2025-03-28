@@ -4,6 +4,8 @@ import TeamModal from '../components/TeamModal';
 import FaqSection from '../components/FaqSection';
 import ScheduleDate from '../components/ScheduleDate';
 import ResponseDate from '../components/ResponseDate';
+import BasicSuscriptionModal from '../components/BasicSuscriptionModal';
+import ResponseSuscription from '../components/ResponseSuscription';
 
 // Definir el tipo de datos que se espera en onSubmitSuccess
 interface FormData {
@@ -15,6 +17,14 @@ interface FormData {
 const Home = () => {
   const [isScheduleModalOpen, setIsScheduleModalOpen] = useState(false);
   const [isResponseModalOpen, setIsResponseModalOpen] = useState(false);
+  const [isBasicSuscriptionModalOpen, setIsBasicSuscriptionModalOpen] =
+    useState(false);
+  const [isResponseSuscriptionModalOpen, setIsResponseSuscriptionModalOpen] =
+    useState(false);
+
+  // Nombre del usuario (puede ser dinámico según el formulario de suscripción)
+  
+  const [userName] = useState('Nombre de Usuario');
 
   // Estado para almacenar los datos del formulario
   const [formData, setFormData] = useState<FormData>({
@@ -385,9 +395,9 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section>        
 
-        {/* Sección - Planes */}
+        {/* Sección - Planes de suscripción */}
         <section
           className="bg-white-eske min-h-[800px] py-18 px-4 sm:px-6 md:px-8"
           style={{ backgroundColor: 'var(--White-eske)' }}
@@ -407,6 +417,7 @@ const Home = () => {
 
             {/* Contenedor de las Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              
               {/* Card 1 - Sólo un producto */}
               <div className="bg-white-10 rounded-lg shadow-lg p-6 text-center relative overflow-visible w-full max-w-[350px] mx-auto">
                 {/* Encabezado con fondo white-eske */}
@@ -456,7 +467,10 @@ const Home = () => {
                   </div>
 
                   {/* Botón Suscribirme */}
-                  <button className="mt-8 w-full bg-white-eske text-gray text-10px font-bold uppercase py-3 rounded-lg shadow-md border border-bluegreen-eske hover:bg-bluegreen-eske hover:text-white-eske transition-all duration-300 ease-in-out">
+                  <button
+                    onClick={() => setIsBasicSuscriptionModalOpen(true)} // Abrir el modal
+                    className="mt-8 w-full bg-white-eske text-gray text-10px font-bold uppercase py-3 rounded-lg shadow-md border border-bluegreen-eske hover:bg-bluegreen-eske hover:text-white-eske transition-all duration-300 ease-in-out"
+                  >
                     SUSCRIBIRME
                   </button>
                 </div>
@@ -464,7 +478,7 @@ const Home = () => {
 
               {/* Card 2 - Todo Eskemma */}
               <div className="bg-white-10 rounded-lg shadow-lg p-6 text-center relative overflow-visible w-full max-w-[350px] mx-auto">
-                {/* Encabezado con fondo white-eske */}
+                {/* Encabezado con fondo black-eske */}
                 <div
                   className="absolute top-[-15px] left-1/2 transform -translate-x-1/2 bg-black-eske px-6 py-2 border border-bluegreen-eske text-white-eske text-10px font-medium z-10 whitespace-nowrap"
                   style={{ boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.2)' }}
@@ -559,15 +573,46 @@ const Home = () => {
                     </p>
                   </div>
 
-                  {/* Botón Suscribirme */}
-                  <button className="mt-8 w-full bg-white-eske text-gray text-10px font-bold uppercase py-3 rounded-lg shadow-md border border-bluegreen-eske hover:bg-bluegreen-eske hover:text-white-eske transition-all duration-300 ease-in-out">
-                    SUSCRIBIRME
-                  </button>
+                  {/* Modal de Suscripción (Plan Básico) */}
+                  <BasicSuscriptionModal
+                    isOpen={isBasicSuscriptionModalOpen}
+                    onClose={() => setIsBasicSuscriptionModalOpen(false)}
+                    onPaymentSuccess={() => {
+                      setIsBasicSuscriptionModalOpen(false); // Cerrar el modal de suscripción
+                      setIsResponseSuscriptionModalOpen(true); // Abrir el modal de respuesta
+                    }}
+                  />
+
+                  {/* Modal de Respuesta después de la suscripción */}
+                  <ResponseSuscription
+                    isOpen={isResponseSuscriptionModalOpen}
+                    onClose={() => setIsResponseSuscriptionModalOpen(false)}
+                    userName={userName} // Pasar el nombre del usuario
+                  />
                 </div>
               </div>
-            </div>
+
+            </div> {/* end contenedor cards planes */}
           </div>
         </section>
+
+        {/* Modal de Suscripción (Plan Básico) */}
+        <BasicSuscriptionModal
+          isOpen={isBasicSuscriptionModalOpen}
+          onClose={() => setIsBasicSuscriptionModalOpen(false)}
+          onPaymentSuccess={() => {
+            setIsBasicSuscriptionModalOpen(false); // Cerrar el modal de suscripción
+            setIsResponseSuscriptionModalOpen(true); // Abrir el modal de respuesta
+          }}
+        />
+
+        {/* Modal de Respuesta después de la suscripción */}
+        <ResponseSuscription
+          isOpen={isResponseSuscriptionModalOpen}
+          onClose={() => setIsResponseSuscriptionModalOpen(false)}
+          userName={userName} // Pasar el nombre del usuario
+        />
+       
 
         {/* Sección - FAQ */}
         <FaqSection />
