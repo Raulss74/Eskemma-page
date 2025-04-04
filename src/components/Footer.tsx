@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer>
       {/* Primera sección: Fondo blue-eske */}
-      <div className="bg-bluegreen-eske text-white-eske py-12 px-4 sm:px-6 md:px-8">
+      <div className="bg-bluegreen-70 text-white-eske py-12 px-4 sm:px-6 md:px-8">
         <div className="w-[90%] mx-auto max-w-screen-xl">
           {/* Logotipo centrado */}
           <div className="flex justify-center mb-8">
@@ -183,191 +183,172 @@ const Footer = () => {
             
           </div>
 
-          {/* Contenedor de dos columnas */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto max-w-screen-xl">
+           {/* Contenedor de cuatro columnas */}
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto max-w-screen-xl">
             {/* Columna 1: Navegación */}
             <div>
               <h3 className="text-14px font-medium mb-4">Navegación</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a
-                    href="/"
-                    className="hover:text-blue-10 transition-colors duration-300"
-                  >
-                    Inicio
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/recursos"
-                    className="hover:text-blue-10 transition-colors duration-300"
-                  >
-                    Recursos
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/el-baul-de-fouche"
-                    className="hover:text-blue-10 transition-colors duration-300"
-                  >
-                    El Baúl de Fouché
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/moddulo"
-                    className="hover:text-blue-10 transition-colors duration-300"
-                  >
-                    Moddulo
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/sefix"
-                    className="hover:text-blue-10 transition-colors duration-300"
-                  >
-                    Sefix
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/cursos"
-                    className="hover:text-blue-10 transition-colors duration-300"
-                  >
-                    Cursos
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/contacto"
-                    className="hover:text-blue-10 transition-colors duration-300"
-                  >
-                    Contacto
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/terminos-y-condiciones"
-                    className="hover:text-blue-10 transition-colors duration-300"
-                  >
-                    Términos y condiciones
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/politica-de-privacidad"
-                    className="hover:text-blue-10 transition-colors duration-300"
-                  >
-                    Política de privacidad
-                  </a>
-                </li>
-              </ul>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {/* Primera columna */}
+                <ul className="space-y-2">
+                  <li>
+                    <a href="/" className="hover:text-blue-10 transition-colors duration-300">
+                      Inicio
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/recursos" className="hover:text-blue-10 transition-colors duration-300">
+                      Recursos
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/el-baul-de-fouche" className="hover:text-blue-10 transition-colors duration-300">
+                      El Baúl de Fouché
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/moddulo" className="hover:text-blue-10 transition-colors duration-300">
+                      Moddulo
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/sefix" className="hover:text-blue-10 transition-colors duration-300">
+                      Sefix
+                    </a>
+                  </li>
+                </ul>
+
+                {/* Segunda columna */}
+                <ul className="space-y-2">
+                  <li>
+                    <a href="/cursos" className="hover:text-blue-10 transition-colors duration-300">
+                      Cursos
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/monitor" className="hover:text-blue-10 transition-colors duration-300">
+                      Monitor
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/contacto" className="hover:text-blue-10 transition-colors duration-300">
+                      Contacto
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/terminos-y-condiciones" className="hover:text-blue-10 transition-colors duration-300">
+                      Términos y condiciones
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/politica-de-privacidad" className="hover:text-blue-10 transition-colors duration-300">
+                      Política de privacidad
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
 
             {/* Columna 2: Sitios de interés */}
             <div>
               <h3 className="text-14px font-medium mb-4">Sitios de interés</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a
-                    href="https://ine.mx"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-blue-10 transition-colors duration-300"
-                  >
-                    INE
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.diputados.gob.mx"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-blue-10 transition-colors duration-300"
-                  >
-                    H. Cámara de Diputados
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.senado.gob.mx"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-blue-10 transition-colors duration-300"
-                  >
-                    Senado de la República
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.inegi.org.mx"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-blue-10 transition-colors duration-300"
-                  >
-                    INEGI
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.coneval.org.mx"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-blue-10 transition-colors duration-300"
-                  >
-                    CONEVAL
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.unam.mx"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-blue-10 transition-colors duration-300"
-                  >
-                    UNAM
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.colmex.mx"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-blue-10 transition-colors duration-300"
-                  >
-                    COLMEX
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.scjn.gob.mx"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-blue-10 transition-colors duration-300"
-                  >
-                    SCJN
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.tepjf.gob.mx"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-blue-10 transition-colors duration-300"
-                  >
-                    TEPJF
-                  </a>
-                </li>
-              </ul>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {/* Primera columna */}
+                <ul className="space-y-2">
+                  <li>
+                    <a
+                      href="https://ine.mx"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-blue-10 transition-colors duration-300"
+                    >
+                      INE
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.inegi.org.mx"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-blue-10 transition-colors duration-300"
+                    >
+                      INEGI
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.scjn.gob.mx"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-blue-10 transition-colors duration-300"
+                    >
+                      SCJN
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.tepjf.gob.mx"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-blue-10 transition-colors duration-300"
+                    >
+                      TEPJF
+                    </a>
+                  </li>
+                </ul>
+
+                {/* Segunda columna */}
+                <ul className="space-y-2">
+                  <li>
+                    <a
+                      href="https://www.diputados.gob.mx"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-blue-10 transition-colors duration-300"
+                    >
+                      H. Cámara de Diputados
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.senado.gob.mx"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-blue-10 transition-colors duration-300"
+                    >
+                      Senado de la República
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.colmex.mx/biblioteca"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-blue-10 transition-colors duration-300"
+                    >
+                      Biblioteca del COLMEX
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.biblioteca.unam.mx"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-blue-10 transition-colors duration-300"
+                    >
+                      Biblioteca Digital UNAM
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-
-
         </div>
       </div>
 
+
       {/* Segunda sección: Fondo bluegreen-eske */}
-      <div className="bg-bluegreen-70 text-gray-10 py-6 px-4 sm:px-6 md:px-8 text-center font-light text-8px">
+      <div className="bg-bluegreen-80 text-gray-10 py-6 px-4 sm:px-6 md:px-8 text-center font-light text-8px">
         <div className="w-[90%] mx-auto max-w-screen-xl">
           <p>
             Eskemma | {currentYear} | © Todos los derechos reservados |{" "}

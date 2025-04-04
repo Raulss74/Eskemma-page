@@ -5,6 +5,8 @@ import FaqSection from '../components/FaqSection';
 import ScheduleDate from '../components/ScheduleDate';
 import ResponseDate from '../components/ResponseDate';
 import BasicSuscriptionModal from '../components/BasicSuscriptionModal';
+import PremiumSuscriptionModal from '../components/PremiumSuscriptionModal';
+import GrupalSuscriptionModal from '../components/GrupalSuscriptionModal';
 import ResponseSuscription from '../components/ResponseSuscription';
 
 // Definir el tipo de datos que se espera en onSubmitSuccess
@@ -19,11 +21,15 @@ const Home = () => {
   const [isResponseModalOpen, setIsResponseModalOpen] = useState(false);
   const [isBasicSuscriptionModalOpen, setIsBasicSuscriptionModalOpen] =
     useState(false);
+  const [isPremiumSuscriptionModalOpen, setIsPremiumSuscriptionModalOpen] =
+    useState(false);
+  const [isGrupalSuscriptionModalOpen, setIsGrupalSuscriptionModalOpen] =
+    useState(false);
   const [isResponseSuscriptionModalOpen, setIsResponseSuscriptionModalOpen] =
     useState(false);
 
   // Nombre del usuario (puede ser dinámico según el formulario de suscripción)
-  
+
   const [userName] = useState('Nombre de Usuario');
 
   // Estado para almacenar los datos del formulario
@@ -395,7 +401,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </section>        
+        </section>
 
         {/* Sección - Planes de suscripción */}
         <section
@@ -407,17 +413,14 @@ const Home = () => {
             <h2 className="text-20px font-bold text-center text-bluegreen-eske mb-6">
               Selecciona el mejor plan para tu proyecto político
             </h2>
-
             {/* Párrafo Descriptivo */}
             <p className="text-14px font-light text-center text-gray mb-18 max-w-[600px] mx-auto">
               <span>Suscríbete y accede al</span>
               <br />
               <span>ecosistema digital de Eskemma</span>
             </p>
-
             {/* Contenedor de las Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              
               {/* Card 1 - Sólo un producto */}
               <div className="bg-white-10 rounded-lg shadow-lg p-6 text-center relative overflow-visible w-full max-w-[350px] mx-auto">
                 {/* Encabezado con fondo white-eske */}
@@ -501,7 +504,9 @@ const Home = () => {
                       <strong>Obtienes Plan Básico +</strong>
                     </p>
                     <p>Acceso total al ecosistema de Eskemma</p>
-                    <p>Acceso a recursos exclusivos</p>
+                    <p>
+                      Acceso a recursos exclusivos para tu proyecto pollítico
+                    </p>
                     <p>1 sesión de asesoría gratuita al mes</p>
                   </div>
 
@@ -522,7 +527,10 @@ const Home = () => {
                   </div>
 
                   {/* Botón Suscribirme */}
-                  <button className="mt-8 w-full bg-orange-eske text-white-eske text-10px font-bold uppercase py-3 rounded-lg shadow-md border border-bluegreen-eske hover:bg-bluegreen-eske hover:text-white-eske transition-all duration-300 ease-in-out">
+                  <button
+                    className="mt-8 w-full bg-orange-eske text-white-eske text-10px font-bold uppercase py-3 rounded-lg shadow-md border border-bluegreen-eske hover:bg-bluegreen-eske hover:text-white-eske transition-all duration-300 ease-in-out"
+                    onClick={() => setIsPremiumSuscriptionModalOpen(true)}
+                  >
                     SUSCRIBIRME
                   </button>
                 </div>
@@ -573,6 +581,14 @@ const Home = () => {
                     </p>
                   </div>
 
+                  {/* Botón Suscribirme */}
+                  <button
+                    onClick={() => setIsGrupalSuscriptionModalOpen(true)} // Abrir el modal
+                    className="mt-8 w-full bg-white-eske text-gray text-10px font-bold uppercase py-3 rounded-lg shadow-md border border-bluegreen-eske hover:bg-bluegreen-eske hover:text-white-eske transition-all duration-300 ease-in-out"
+                  >
+                    SUSCRIBIRME
+                  </button>
+
                   {/* Modal de Suscripción (Plan Básico) */}
                   <BasicSuscriptionModal
                     isOpen={isBasicSuscriptionModalOpen}
@@ -582,20 +598,14 @@ const Home = () => {
                       setIsResponseSuscriptionModalOpen(true); // Abrir el modal de respuesta
                     }}
                   />
-
-                  {/* Modal de Respuesta después de la suscripción */}
-                  <ResponseSuscription
-                    isOpen={isResponseSuscriptionModalOpen}
-                    onClose={() => setIsResponseSuscriptionModalOpen(false)}
-                    userName={userName} // Pasar el nombre del usuario
-                  />
                 </div>
               </div>
-
-            </div> {/* end contenedor cards planes */}
+            </div>{' '}
+            {/* end contenedor cards planes */}
           </div>
         </section>
 
+        {/* MODALES (FUERA DE LA SECCIÓN PLANES) */}
         {/* Modal de Suscripción (Plan Básico) */}
         <BasicSuscriptionModal
           isOpen={isBasicSuscriptionModalOpen}
@@ -606,13 +616,32 @@ const Home = () => {
           }}
         />
 
+        {/* Modal de Suscripción (Plan Premium) */}
+        <PremiumSuscriptionModal
+          isOpen={isPremiumSuscriptionModalOpen}
+          onClose={() => setIsPremiumSuscriptionModalOpen(false)}
+          onPaymentSuccess={() => {
+            setIsPremiumSuscriptionModalOpen(false); // Cerrar el modal de suscripción
+            setIsResponseSuscriptionModalOpen(true); // Abrir el modal de respuesta
+          }}
+        />
+
+        {/* Modal de Suscripción (Plan Grupal) */}
+        <GrupalSuscriptionModal
+          isOpen={isGrupalSuscriptionModalOpen}
+          onClose={() => setIsGrupalSuscriptionModalOpen(false)}
+          onPaymentSuccess={() => {
+            setIsGrupalSuscriptionModalOpen(false); // Cerrar el modal de suscripción
+            setIsResponseSuscriptionModalOpen(true); // Abrir el modal de respuesta
+          }}
+        />
+
         {/* Modal de Respuesta después de la suscripción */}
         <ResponseSuscription
           isOpen={isResponseSuscriptionModalOpen}
           onClose={() => setIsResponseSuscriptionModalOpen(false)}
           userName={userName} // Pasar el nombre del usuario
         />
-       
 
         {/* Sección - FAQ */}
         <FaqSection />
@@ -623,6 +652,9 @@ const Home = () => {
           style={{ backgroundColor: 'var(--white-eske)' }}
         >
           <div className="w-[90%] mx-auto max-w-screen-xl">
+            <h2 className="text-20px font-bold text-center text-bluegreen-eske mb-14">
+              Enlaces rápidos
+            </h2>
             {/* Grilla de enlaces */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Moddulo */}

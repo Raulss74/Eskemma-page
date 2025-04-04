@@ -1,61 +1,27 @@
-import { useState } from "react";
 
-interface BasicSuscriptionModalProps {
+interface PremiumSuscriptionModalProps {
   isOpen: boolean;
   onClose: () => void;
-  onPaymentSuccess: () => void;
+  onPaymentSuccess: () => void; // Prop para manejar el éxito del pago
 }
 
-export default function BasicSuscriptionModal({
+export default function PremiumSuscriptionModal({
   isOpen,
   onClose,
   onPaymentSuccess,
-}: BasicSuscriptionModalProps) {
-  const [selectedService, setSelectedService] = useState<string>("Moddulo");
-
+}: PremiumSuscriptionModalProps) {
   if (!isOpen) return null;
-
-  // Estilo personalizado CORREGIDO para los radio buttons
-  const radioButtonStyle = `
-    .custom-radio {
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      width: 16px;
-      height: 16px;
-      border: 2px solid #6b7280;
-      border-radius: 50%;
-      outline: none;
-      cursor: pointer;
-      position: relative;
-      transition: all 0.2s ease;
-      vertical-align: middle;
-    }
-    
-    .custom-radio:checked {
-      border-color: #1e40af;
-      background-color: #1e40af;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='3'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-    
-    .custom-radio:focus {
-      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
-    }
-  `;
 
   return (
     <div
-      className="fixed inset-0 z-70 flex items-center justify-center"
-      style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}
+      className="fixed inset-0 z-50 flex items-center justify-center"
+      style={{ backgroundColor: "rgba(0, 0, 0, 0.8)" }}
     >
-      <style>{radioButtonStyle}</style>
-      
       <div
         className="bg-white-eske rounded-lg shadow-lg w-full max-w-md p-6 relative overflow-y-auto max-h-[80vh]"
         style={{ marginTop: "20px" }}
       >
+        {/* Botón de Cierre */}
         <button
           className="absolute top-4 right-4 text-gray-700 hover:text-red-eske transition-colors duration-300"
           onClick={onClose}
@@ -63,7 +29,7 @@ export default function BasicSuscriptionModal({
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"
-            fill="blue-eske"
+            fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
           >
@@ -77,83 +43,50 @@ export default function BasicSuscriptionModal({
         </button>
 
         <div className="space-y-6 text-left">
+          {/* Título del Modal */}
           <h2 className="text-20px font-bold text-bluegreen-eske text-center">
             Suscripción
           </h2>
 
+          {/* Imagen */}
           <div className="flex justify-center">
             <img
-              src="https://images.unsplash.com/photo-1565350552203-b68085b104df?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Plan Básico"
+              src="https://images.unsplash.com/photo-1611095973763-414019e72400?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Plan Premium"
               className="w-150 h-70"
             />
           </div>
 
+          {/* Nombre del Plan */}
           <p className="text-14px font-medium text-bluegreen-eske">
-            Plan Básico
+            Plan Premium
           </p>
 
+          {/* Precio */}
           <p className="text-12px font-bold text-black-eske">
-            $2,000ºº (mx) pago por persona / mes
+            $4,000 (MX) por persona / mes
           </p>
 
-          <p className="text-10px font-normal text-gray-700">
-            Selecciona un servicio:
-          </p>
+          {/* Bloque de texto con la descripción */}
           <div className="space-y-2">
-            <label className="flex items-center space-x-2 ml-4 cursor-pointer">
-              <input
-                type="radio"
-                name="service"
-                value="Moddulo"
-                checked={selectedService === "Moddulo"}
-                onChange={(e) => setSelectedService(e.target.value)}
-                className="custom-radio"
-              />
-              <span className="ml-2 text-10px font-normal text-gray-700">Moddulo</span>
-            </label>
-
-            <label className="flex items-center space-x-2 ml-4 cursor-pointer">
-              <input
-                type="radio"
-                name="service"
-                value="Sefix"
-                checked={selectedService === "Sefix"}
-                onChange={(e) => setSelectedService(e.target.value)}
-                className="custom-radio"
-              />
-              <span className="ml-2 text-10px font-normal text-gray-700">Sefix</span>
-            </label>
-
-            <label className="flex items-center space-x-2 ml-4 cursor-pointer">
-              <input
-                type="radio"
-                name="service"
-                value="Cursos online"
-                checked={selectedService === "Cursos online"}
-                onChange={(e) => setSelectedService(e.target.value)}
-                className="custom-radio"
-              />
-              <span className="ml-2 text-10px font-normal text-gray-700">Cursos online</span>
-            </label>
-
-            <label className="flex items-center space-x-2 ml-4 cursor-pointer">
-              <input
-                type="radio"
-                name="service"
-                value="Monitor"
-                checked={selectedService === "Monitor"}
-                onChange={(e) => setSelectedService(e.target.value)}
-                className="custom-radio"
-              />
-              <span className="ml-2 text-10px font-normal text-gray-700">Monitor</span>
-            </label>
+            <p className="text-10px font-normal text-gray-700">
+              Tu suscripción mensual incluye:
+            </p>
+            <ul className="list-disc pl-6 text-10px text-gray-700 space-y-1">
+              <li>Acceso total al ecosistema de Eskemma</li>
+              <li>Acceso a recursos exclusivos</li>
+              <li>Una sesión de asesoría gratuita al mes</li>
+              <li>Asistencia online 24/7</li>
+              <li>Acceso total a eBooks y plantillas</li>
+            </ul>
           </div>
 
+          {/* Método de pago */}
           <p className="text-14px font-medium text-bluegreen-eske">
             Método de pago
           </p>
           <div className="flex items-center justify-between">
+            {/* Ícono de tarjeta de crédito y texto */}
             <div className="flex items-center space-x-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -173,6 +106,7 @@ export default function BasicSuscriptionModal({
                 **** **** **** 1234
               </p>
             </div>
+            {/* Botón CAMBIAR */}
             <button
               className="text-10px font-medium text-gray-700 px-4 py-2 border border-gray-90 rounded hover:bg-blue-eske hover:text-white-eske"
             >
@@ -180,15 +114,18 @@ export default function BasicSuscriptionModal({
             </button>
           </div>
 
+          {/* Botón PAGAR */}
           <button
             className="w-full bg-bluegreen-eske text-white-eske py-2 rounded hover:bg-blue-eske transition-colors duration-300"
-            onClick={onPaymentSuccess}
+            onClick={onPaymentSuccess} // Llamar a la función de éxito del pago
           >
-            PAGAR $ 2,000.ºº
+            PAGAR $4,000.ºº
           </button>
 
+          {/* Línea horizontal */}
           <hr className="border-gray-300 my-4" />
 
+          {/* Links adicionales */}
           <p className="text-8px text-gray-700 text-center">
             Consultar{" "}
             <a
