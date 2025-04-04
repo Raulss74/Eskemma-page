@@ -1,146 +1,135 @@
 // src/components/Footer.tsx
-
 const Footer = () => {
   const currentYear = new Date().getFullYear(); // Obtener el año actual dinámicamente
 
   return (
     <footer>
       {/* Primera sección: Fondo blue-eske */}
-      <div className="bg-bluegreen-70 text-white-eske py-12 px-4 sm:px-6 md:px-8">
+      <div className="bg-bluegreen-eske text-white-eske py-12 px-4 sm:px-6 md:px-8">
         <div className="w-[90%] mx-auto max-w-screen-xl">
-          {/* Logotipo centrado */}
-          <div className="flex justify-center mb-8">
-            <img
-              src="/src/assets/img/esk_log_wsm.svg" // Ruta del logotipo
-              alt="Eskemma Logo"
-              className="h-14 w-auto"
-            />
-          </div>
+          {/* Contenedor para Logotipo e Íconos de Redes Sociales */}
+          <div className="flex flex-col md:flex-row items-center justify-between 
+          mb-8">
+            {/* Logotipo */}
+            <div className="flex-shrink-0">
+              <img
+                src="/src/assets/img/esk_log_wsm.svg" // Ruta del logotipo
+                alt="Eskemma Logo"
+                className="h-14 w-auto"
+              />
+            </div>
 
-          {/* Íconos de redes sociales (espacio reservado) */}
-          <div className="flex justify-center space-x-4 mb-8">
-            {/* Ícono de X (Twitter) */}
-            <a
-              href="https://twitter.com/eskemma"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-blue-10 transition-colors duration-300"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="white"
-                strokeWidth=".5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="w-12 h-12"
+            {/* Íconos de redes sociales */}
+            <div className="flex space-x-4 mt-4 md:mt-0">
+              {/* Ícono de X (Twitter) */}
+              <a
+                href="https://twitter.com/eskemma"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-10 transition-colors duration-300"
               >
-                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-              </svg>
-            </a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="white"
+                  strokeWidth=".5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="w-12 h-12"
+                >
+                  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                </svg>
+              </a>
 
-            {/* Ícono de LinkedIn */}
-            <a
-              href="https://linkedin.com/company/eskemma"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-blue-70 transition-colors duration-300"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="white"
-                strokeWidth=".5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="w-12 h-12"
+              {/* Ícono de LinkedIn */}
+              <a
+                href="https://linkedin.com/company/eskemma"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-70 transition-colors duration-300"
               >
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                <rect x="2" y="9" width="4" height="12" rx="2" ry="2"></rect>
-                <circle cx="4" cy="4" r="2"></circle>
-              </svg>
-            </a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="white"
+                  strokeWidth=".5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="w-12 h-12"
+                >
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12" rx="2" ry="2"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
 
-            {/* Ícono de YouTube */}
-            <a
-              href="https://www.youtube.com/@eskemma"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-blue-70 transition-colors duration-300"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512"
-                fill="none"
-                stroke="white"
-                strokeWidth="10"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="w-12 h-12"
+              {/* Ícono de YouTube */}
+              <a
+                href="https://www.youtube.com/@eskemma"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-70 transition-colors duration-300"
               >
-                {/* Contorno principal */}
-                <path
-                  d="M260.4,449c-57.1-1.8-111.4-3.2-165.7-5.3c-11.7-0.5-23.6-2.3-35-5c-21.4-5-36.2-17.9-43.8-39c-6.1-17-8.3-34.5-9.9-52.3
-                    C2.5,305.6,2.5,263.8,4.2,222c1-23.6,1.6-47.4,7.9-70.3c3.8-13.7,8.4-27.1,19.5-37c11.7-10.5,25.4-16.8,41-17.5
-                    c42.8-2.1,85.5-4.7,128.3-5.1c57.6-0.6,115.3,0.2,172.9,1.3c24.9,0.5,50,1.8,74.7,5c22.6,3,39.5,15.6,48.5,37.6
-                    c6.9,16.9,9.5,34.6,11,52.6c3.9,45.1,4,90.2,1.8,135.3c-1.1,22.9-2.2,45.9-8.7,68.2c-7.4,25.6-23.1,42.5-49.3,48.3
-                    c-10.2,2.2-20.8,3-31.2,3.4C366.2,445.7,311.9,447.4,260.4,449z M205.1,335.3c45.6-23.6,90.7-47,136.7-70.9
-                    c-45.9-24-91-47.5-136.7-71.4C205.1,240.7,205.1,287.6,205.1,335.3z"
-                />
-              </svg>
-            </a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="white"
+                  strokeWidth=".5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="w-12 h-12"
+                >
+                  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33A2.78 2.78 0 0 0 22.54 6.42z"></path>
+                  <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                </svg>
+              </a>
 
-            {/* Ícono de TikTok */}
-            <a
-              href="https://www.tiktok.com/@eskemma"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-blue-70 transition-colors duration-300"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="white"
-                strokeWidth=".5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="w-12 h-12"
+              {/* Ícono de TikTok */}
+              <a
+                href="https://www.tiktok.com/@eskemma"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-70 transition-colors duration-300"
               >
-                {/* Contorno del logo */}
-                <path
-                  d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z"
-                />
-              </svg>
-            </a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="white"
+                  strokeWidth=".5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="w-12 h-12"
+                >
+                  <path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z"></path>
+                </svg>
+              </a>
 
-            {/* Ícono de Facebook */}
-            <a
-              href="https://www.facebook.com/eskemma"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-blue-70 transition-colors duration-300"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="white"
-                strokeWidth=".5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="w-12 h-12"
+              {/* Ícono de Facebook */}
+              <a
+                href="https://www.facebook.com/eskemma"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-70 transition-colors duration-300"
               >
-                {/* Contorno del logo */}
-                <path
-                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2z"
-                />
-              </svg>
-            </a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="white"
+                  strokeWidth=".5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="w-12 h-12"
+                >
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2z"></path>
+                </svg>
+              </a>
 
-            {/* Ícono de Instagram */}
+              {/* Ícono de Instagram */}
             <a
               href="https://www.instagram.com/eskemma"
               target="_blank"
@@ -176,15 +165,12 @@ const Footer = () => {
                     h35.2c11.3,0,20.5,9.2,20.5,20.5V67.7z"
                 />
               </svg>
-            </a>
-
-            
-
-            
+              </a>
+            </div>
           </div>
 
-           {/* Contenedor de cuatro columnas */}
-           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto max-w-screen-xl">
+          {/* Contenedor de dos columnas */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto max-w-screen-xl">
             {/* Columna 1: Navegación */}
             <div>
               <h3 className="text-14px font-medium mb-4">Navegación</h3>
