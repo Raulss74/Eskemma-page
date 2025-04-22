@@ -1,6 +1,7 @@
 // src/pages/Contacto.tsx
 import ContactoSidebar from "../components/ContactoSidebar";
 import ContactoAIAssistant from "../components/ContactoAIAssistant";
+import WorkingPage from "../components/WorkingPage";
 
 const Contacto = () => {
   return (
@@ -22,6 +23,9 @@ const Contacto = () => {
             Descripción de la característica principal de Contacto.
           </p>
         </div>
+
+        <WorkingPage pageName="Contacto"/>
+
       </main>
 
       {/* AIAssistant personalizado */}

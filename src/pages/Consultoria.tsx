@@ -2,6 +2,7 @@
 // src/pages/Sefix.tsx
 import ConsultoriaSidebar from "../components/ConsultoriaSidebar"
 import ConsultoriaAIAssistant from "../components/ConsultoriaAIAssistant"
+import WorkingPage from "../components/WorkingPage";
 
 const Consultoria = () => {
   return (
@@ -22,6 +23,8 @@ const Consultoria = () => {
           <p className="mt-2 text-gray-500">
             Descripción de la característica principal de Consultoria.
           </p>
+
+          <WorkingPage pageName="Consultoría"/>
         </div>
       </main>
 

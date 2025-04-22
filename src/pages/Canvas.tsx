@@ -1,6 +1,7 @@
 // src/pages/Canvas.tsx
 import CanvasSidebar from "../components/CanvasSidebar";
 import CanvasAIAssistant from "../components/CanvasAIAssistant";
+import WorkingPage from "../components/WorkingPage";
 
 const Sefix = () => {
   return (
@@ -13,7 +14,7 @@ const Sefix = () => {
         <h2 className="text-2xl font-bold text-gray-800">Canvas</h2>
         <p className="mt-2 text-gray-600">
           Esta es la página de Canvas. Aquí puedes agregar funcionalidades específicas.
-        </p>
+        </p>       
 
         {/* Ejemplo de contenido */}
         <div className="mt-6 bg-white p-6 rounded-lg shadow-md">
@@ -21,6 +22,11 @@ const Sefix = () => {
           <p className="mt-2 text-gray-500">
             Descripción de la característica principal de Canvas.
           </p>
+
+          <WorkingPage pageName="Moddulo"/>          
+
+          
+
         </div>
       </main>
 

@@ -1,6 +1,7 @@
 // src/pages/ElBauDeFouche.tsx
 import BaulSidebar from "../components/BaulSidebar"
 import BaulAIAssistant from "../components/BaulAIAssistant"
+import WorkingPage from "../components/WorkingPage";
 
 const ElBauDeFouche = () => {
   return (
@@ -22,6 +23,9 @@ const ElBauDeFouche = () => {
             Descripción de la característica principal de El Baúl de Fouché.
           </p>
         </div>
+
+        <WorkingPage pageName='"El baúl de Fouché"'/>
+
       </main>
 
       {/* AIAssistant personalizado */}

@@ -1,6 +1,7 @@
 // src/pages/Recursos.tsx
 import RecursosSidebar from "../components/RecursosSidebar";
 import RecursosAIAssistant from "../components/RecursosAIAssistant";
+import WorkingPage from "../components/WorkingPage";
 
 const Recursos = () => {
   return (
@@ -22,6 +23,9 @@ const Recursos = () => {
             Descripción de la característica principal de Recursos.
           </p>
         </div>
+
+        <WorkingPage pageName="Recursos"/>
+
       </main>
 
       {/* AIAssistant personalizado */}

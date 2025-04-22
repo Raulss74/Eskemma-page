@@ -1,6 +1,7 @@
 // src/pages/Canvas.tsx
 import MonitorSidebar from "../components/MonitorSidebar";
 import MonitorAIAssistant from "../components/MonitorAIAssistant";
+import WorkingPage from "../components/WorkingPage";
 
 const Sefix = () => {
   return (
@@ -22,6 +23,8 @@ const Sefix = () => {
             Descripción de la característica principal de Monitor.
           </p>
         </div>
+
+        <WorkingPage pageName="Monitor"/>
       </main>
 
       {/* AIAssistant personalizado */}

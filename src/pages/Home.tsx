@@ -47,13 +47,13 @@ const Home = () => {
         <section
           className="relative min-h-[650px] w-full bg-cover bg-center flex items-center justify-center overflow-hidden"
           style={{
-            backgroundImage: 'url(/src/assets/img/hero.webp)',
+            backgroundImage: 'url(/src/assets/img/hero2.webp)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
         >
           {/* Contenido del Hero */}
-          <div className="absolute inset-0 bg-bluegreen-70 opacity-70"></div>
+          <div className="absolute inset-0 bg-bluegreen-eske opacity-60"></div>
           <div className="relative z-10 text-center text-white-eske px-4 sm:px-6 md:px-8 max-w-screen-xl mx-auto w-full">
             <h1 className="text-30px leading-tight">Consultoría política</h1>
             <h2 className="mt-20 text-24px leading-tight">
@@ -122,17 +122,17 @@ const Home = () => {
               {/* Entrada 1 */}
               <div className="flex flex-col items-center text-center">
                 <img
-                  src="/src/assets/img/barras.gif" // Ruta de la imagen/gif
+                  src="/src/assets/img/part_comparativa_circuns.gif" // Ruta de la imagen/gif
                   alt="Gráfica 1"
-                  className="w-full h-auto object-contain rounded-lg mb-4"
+                  className="w-auto h-auto object-contain rounded-lg mb-4"
                   style={{ aspectRatio: '16 / 9' }}
                 />
                 <p className="text-12px text-gray mb-4">
-                  Tendencia positiva de participación electoral.
+                  Análisis de la participación electoral por circunscripción <br></br>en las elecciones federales 2006 - 2021
                 </p>
                 <a
                   href="/monitor/post1" // Enlace a la página Monitor
-                  className="text-blue-eske hover:text-blue-60 font-medium text-8px"
+                  className="text-blue-eske hover:text-blue-60 font-medium text-10px"
                 >
                   Consultar información
                 </a>
@@ -141,13 +141,13 @@ const Home = () => {
               {/* Entrada 2 */}
               <div className="flex flex-col items-center text-center">
                 <img
-                  src="/src/assets/img/box.gif" // Ruta de la imagen/gif
+                  src="/src/assets/img/part_tipo_eleccion.gif" // Ruta de la imagen/gif
                   alt="Gráfica 2"
                   className="w-full h-auto object-contain rounded-lg mb-4"
                   style={{ aspectRatio: '16 / 9' }}
                 />
                 <p className="text-12px text-gray mb-4">
-                  Análisis de la distribución demográfica por región.
+                  ¿Porqué la participación electoral aumenta en las <br></br> elecciones presidenciales?
                 </p>
                 <a
                   href="/monitor/post2" // Enlace a la página Monitor
@@ -176,7 +176,7 @@ const Home = () => {
             </div>
 
             {/* Mitad Derecha - Texto */}
-            <div className="w-full md:w-1/2 pl-0 md:pl-12 text-12px text-center text-white-eske">
+            <div className="w-full md:w-1/2 pl-0 md:pl-12 text-14px text-center text-white-eske">
               <p className=" font-light mb-4">
                 <span>Nunca es demasiado pronto.</span>
                 <span className="block">

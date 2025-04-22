@@ -24,7 +24,7 @@ const Sefix = () => {
         </div>
         <div>
         <iframe
-          src="http://127.0.0.1:5106" // Reemplaza XXXX con el puerto donde corre Shiny
+          src="http://127.0.0.1:5080" // Reemplaza XXXX con el puerto donde corre Shiny
           className="mt-25 absolute inset-0 w-full h-full border-none rounded-lg"        title="Dashboard de Shiny"
         ></iframe>
         </div>

@@ -1,6 +1,7 @@
 // src/pages/Sefix.tsx
 import CursosSidebar from "../components/CursosSidebar";
 import CursosAIAssistant from "../components/CursosAIAssistant";
+import WorkingPage from "../components/WorkingPage";
 
 
 const Cursos = () => {
@@ -23,6 +24,8 @@ const Cursos = () => {
             Descripción de la característica principal de Cursos.
           </p>
         </div>
+
+        <WorkingPage pageName="Cursos"/>
       </main>
 
       {/* AIAssistant personalizado */}
