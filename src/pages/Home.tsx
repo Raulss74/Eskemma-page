@@ -8,6 +8,7 @@ import BasicSuscriptionModal from '../components/BasicSuscriptionModal';
 import PremiumSuscriptionModal from '../components/PremiumSuscriptionModal';
 import GrupalSuscriptionModal from '../components/GrupalSuscriptionModal';
 import ResponseSuscription from '../components/ResponseSuscription';
+import BenefitsSection from '../components/BenefitsSection';
 
 // Definir el tipo de datos que se espera en onSubmitSuccess
 interface FormData {
@@ -26,7 +27,8 @@ const Home = () => {
   const [isGrupalSuscriptionModalOpen, setIsGrupalSuscriptionModalOpen] =
     useState(false);
   const [isResponseSuscriptionModalOpen, setIsResponseSuscriptionModalOpen] =
-    useState(false);
+    useState(false);  
+  
 
   // Nombre del usuario (puede ser dinámico según el formulario de suscripción)
 
@@ -256,69 +258,7 @@ const Home = () => {
         </section>
 
         {/* Sección - Beneficios */}
-        <section
-          className="bg-bluegreen-eske min-h-[800px] py-20 px-4 sm:px-6 md:px-8"
-          style={{ backgroundColor: 'var(--Bluegreen-eske)' }}
-        >
-          <div className="w-[90%] mx-auto max-w-screen-xl mt-4">
-            {/* Contenedor Reducido en Anchura (10%) */}
-            <div className="mx-auto w-[90%] max-w-[90%]">
-              {/* Grilla de Tarjetas */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                {/* Fila 1 */}
-                <div className="flex items-center justify-center bg-blue-60 p-6 rounded-lg shadow-lg h-48">
-                  <p className="text-12px text-white-eske font-light text-center">
-                    Acompañamiento profesional
-                  </p>
-                </div>
-                <div className="flex items-center justify-center bg-white-eske p-6 rounded-lg shadow-lg h-48">
-                  <p className="text-12px text-bluegreen-eske font-light text-center">
-                    Resultados inmediatos
-                  </p>
-                </div>
-                <div className="flex items-center justify-center bg-bluegreen-60 p-6 rounded-lg shadow-lg h-48">
-                  <p className="text-12px text-white-eske font-light text-center">
-                    Una inversión inteligente
-                  </p>
-                </div>
-
-                {/* Fila 2 */}
-                <div className="flex items-center justify-center bg-bluegreen-60 p-6 rounded-lg shadow-lg h-48">
-                  <p className="text-12px text-white-eske font-light text-center">
-                    No importa el tamaño de tu proyecto político
-                  </p>
-                </div>
-                <div className="flex items-center justify-center bg-white-eske p-6 rounded-lg shadow-lg h-48">
-                  <p className="text-12px text-bluegreen-eske font-light text-center">
-                    Metodologías para hallar tus ventajas competitivas.
-                  </p>
-                </div>
-                <div className="flex items-center justify-center bg-blue-60 p-6 rounded-lg shadow-lg h-48">
-                  <p className="text-12px text-white-eske font-light text-center">
-                    Herramientas e información útil sin pagar más
-                  </p>
-                </div>
-
-                {/* Fila 3 */}
-                <div className="flex items-center justify-center bg-blue-60 p-6 rounded-lg shadow-lg h-48">
-                  <p className="text-12px text-white-eske font-light text-center">
-                    Te acompañamos con honestidad y profesionalismo.
-                  </p>
-                </div>
-                <div className="flex items-center justify-center bg-white-eske p-6 rounded-lg shadow-lg h-48">
-                  <p className="text-12px text-bluegreen-eske font-light text-center">
-                    Ejecuta acciones inmediatas.
-                  </p>
-                </div>
-                <div className="flex items-center justify-center bg-bluegreen-60 p-6 rounded-lg shadow-lg h-48">
-                  <p className="text-12px text-white-eske font-light text-center">
-                    Asesoría de especialistas en todo momento.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <BenefitsSection />
 
         {/* Sección - Testimonios */}
         <section
